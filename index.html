@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2a2a72;
+      --secondary-color: #009ffd;
+      --text-color: #333;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 0.8s forwards;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tech-tag {
+      background: #e8f0fe;
+      color: var(--primary-color);
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .project-link {
+      text-decoration: none;
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      color: var(--primary-color);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Innovation Portfolio</h1>
+      <p>A collection of innovative solutions addressing real-world challenges</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" style="animation-delay: 0.1s;">
+        <div class="project-image">
+          <img src="./payroll.png" alt="HR & Payroll Portal">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">HR & Payroll Management Portal</h3>
+          <p class="project-description">A comprehensive solution for managing employee data, payroll processing, and HR operations with advanced reporting capabilities.</p>
+          <div class="project-tech">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">AJAX</span>
+          </div>
+          <div class="project-links">
+            <a href="./payroll" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo (User: test, Pass: test)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" style="animation-delay: 0.2s;">
+        <div class="project-image">
+          <img src="./matrimony.png" alt="Matrimonial Platform">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Modern Matrimonial Platform</h3>
+          <p class="project-description">A sophisticated matchmaking platform with advanced search filters, profile matching, and secure communication features.</p>
+          <div class="project-tech">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="./matrimony" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Try Demo (User: one@gmail.com, Pass: password)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" style="animation-delay: 0.3s;">
+        <div class="project-image">
+          <img src="./event-management.PNG" alt="Event Management">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Dynamic Event Management Portal</h3>
+          <p class="project-description">A robust platform serving 100+ active users with dynamic location management, flexible pricing, and real-time updates.</p>
+          <div class="project-tech">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Payment Gateway</span>
+          </div>
+          <div class="project-links">
+            <a href="./event-management" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Explore Platform
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" style="animation-delay: 0.4s;">
+        <div class="project-image">
+          <img src="./MutualFundVsInsurance.png" alt="Financial Calculator">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Investment Comparison Tool</h3>
+          <p class="project-description">Advanced calculator providing detailed comparisons between mutual funds and insurance policies to make informed investment decisions.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+          </div>
+          <div class="project-links">
+            <a href="./MutualFundVsInsurance" class="project-link">
+              <i class="fas fa-calculator"></i> Try Calculator
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" style="animation-delay: 0.5s;">
+        <div class="project-image">
+          <img src="./risk_management.png" alt="Risk Management">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Risk Management Calculator</h3>
+          <p class="project-description">Personalized investment recommendation tool based on annual income and risk tolerance assessment.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Financial APIs</span>
+            <span class="tech-tag">Analytics</span>
+          </div>
+          <div class="project-links">
+            <a href="./risk_management" class="project-link">
+              <i class="fas fa-chart-line"></i> Analyze Risk
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" style="animation-delay: 0.6s;">
+        <div class="project-image">
+          <img src="./space-vaarta.png" alt="Space Communication">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Space-Vaarta Communication System</h3>
+          <p class="project-description">Innovative solution for space communication challenges, addressing bandwidth limitations and internet connectivity issues in interplanetary missions.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Communication</span>
+            <span class="tech-tag">Space Tech</span>
+            <span class="tech-tag">Innovation</span>
+          </div>
+          <div class="project-links">
+            <a href="./space-vaarta" class="project-link">
+              <i class="fas fa-satellite"></i> View Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
