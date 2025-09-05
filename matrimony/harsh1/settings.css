@@ -1,0 +1,472 @@
+/* *{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+} */
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* select:hover {
+  background: #7d366856;
+} */
+
+a:hover {
+  color: #200116a6;
+}
+
+a:active {
+  filter: blur(0.1vw);
+}
+
+.contentOut{
+  /* border: 1px solid red; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content{
+  /* border: 1px solid blue; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contentTop{
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E2E2E2;
+  border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2);
+}
+
+.filterOptionOut {
+  /* border: 1px solid blue; */
+  /* border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2); */
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  height: 7vw;
+}
+
+.filterOption {
+  /* border: 1px solid green; */
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  width: 15vw;
+  height: 7vw;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.5vw 0.5vw 0vw 0vw;
+}
+
+.filterOption:hover {
+  /* border-bottom: 0.1vw solid rgba(128, 0, 128, 0.5); */
+  background: #2001163a;
+  /* color: #7D3668; */
+}
+
+.filterOption:active {
+  filter: blur(0.1vw);
+}
+
+/* .filterOption1 {
+border-bottom: 0.2vw solid purple;
+} */
+
+.filterOptionImg {
+  width: 2.8vw;
+  height: 2.8vw;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* border: 0.1vw solid rgba(0, 0, 0, 0.5); */
+  /* border-radius: 0.5vw; */
+}
+
+.filterOptionImg1 {
+  /* -webkit-mask: url("oneGear.svg") no-repeat center;
+  mask: url("basic.svg") no-repeat center; */
+  background: url("oneGear.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filterOptionImg2 {
+  /* -webkit-mask: url("userGear.svg") no-repeat center;
+  mask: url("looks.svg") no-repeat center; */
+  background: url("userGear.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filterOptionImg3 {
+  /* -webkit-mask: url("privacy.svg") no-repeat center;
+  mask: url("personBackground.svg") no-repeat center; */
+  background: url("privacy.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filterOptionImg4 {
+  /* -webkit-mask: url("blocked.svg") no-repeat center;
+  mask: url("lifestyle.svg") no-repeat center; */
+  background: url("blocked.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filterOptionImg5 {
+  /* -webkit-mask: url("manyGears.svg") no-repeat center;
+  mask: url("more.svg") no-repeat center; */
+  background: url("manyGears.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filterOptionText {
+  font-size: 1.2vw;
+  margin-top: 1vw;
+}
+
+
+
+
+
+
+/* .settingOptionOut{ */
+  /* border: 1px solid red; */
+  /* position: absolute;
+  top: 1vw;
+  width: 48vw; */
+  /* height: 5vw; */
+  /* background: #FFFFFF; */
+  /* border-radius: 0.5vw;
+  display: none;
+} */
+
+
+
+
+
+.generalSetting{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 48vw;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  /* display: none; */
+  padding: 1vw 2vw 7vw 2vw;
+  /* flex-basis: 100%; */
+}
+
+.aboutMeOut{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 42vw;
+  margin: 1vw 0vw;
+}
+
+#about_me{
+  width: 100%;
+  height: 7vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  background: none;
+  outline: none;
+  border: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.2);
+  padding: 0.5vw;
+  border-radius: 0.2vw;
+}
+
+.generalSettingOptionOut{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 20vw;
+  margin: 1vw 0vw;
+}
+
+.settingPartition{
+  /* border: 1px solid blue; */
+  width: 2vw;
+  height: 2vw;
+}
+
+.generalSettingOptionLabel{
+  margin: 1vw 0vw 0.1vw 0vw;
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.generalSettingOption{
+  width: 20vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2);
+  padding: 0.4vw 0vw;
+}
+
+.detailText{
+  border: 0.1vw solid rgba(0, 0, 0, 0.2);
+  padding: 0.5vw;
+  border-radius: 0.2vw;
+}
+
+.generalSettingOption:hover{
+  border-bottom: 0.1vw solid black;
+}
+
+.saveSetting{
+  position: absolute;
+  bottom: 3vw;
+  left: 3vw;
+  font-size: 1.2vw;
+  /* font-weight: bold; */
+  padding: 0.5vw 1.2vw;
+  background: linear-gradient(to right, rgb(67,4,39), rgb(128,1,96));
+  color: white;
+  border: 0.1vw solid white;
+  outline: none;
+  border-radius: 3vw;
+}
+
+.saveSetting:hover{
+  color: black;
+  border: 0.1vw solid black;
+  background: none;
+}
+
+.saveSetting:active{
+  filter: blur(0.1vw);
+}
+
+
+.profileSettingForm{
+  padding-bottom: 7vw;
+}
+
+.profileSettingOut{
+  display: flex;
+  flex-direction: column;
+  width: 48vw;
+  justify-content: flex-start;
+  align-items: center;
+  /* background: #FFFFFF; */
+  /* display: none; */
+  /* padding: 1vw 2vw 7vw 2vw; */
+  /* flex-basis: 100%; */
+}
+
+.profileSetting{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 48vw;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  /* display: none; */
+  padding: 1vw 2vw 3vw 2vw;
+  border-radius: 0.5vw;
+  margin-bottom: 1vw;
+  /* flex-basis: 100%; */
+}
+
+.profileContentHeadOut{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2vw;
+  width: 42vw;
+}
+
+.profileContentHead{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.profileContentHeadImg{
+  width: 1.8vw;
+  height: 1.8vw;
+  margin-right: 0.8vw;
+}
+
+.privacySettingOut{
+  padding: 1vw 3vw 6vw 3vw;
+  background: #FFFFFF;
+  width: 48vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* display: none; */
+}
+
+.privacySettingOption{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 42vw;
+  margin: 2vw 0vw;
+  font-size: 1.2vw;
+}
+
+.privacySettingOptionButton{
+  width: 3vw;
+  height: 1.2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  outline: none;
+  background: #e2e2e2b9;
+  transition: 0.2s;
+  /* background: rgba(128, 0, 128, 0.4); */
+}
+
+.privacySettingOptionButton:hover{
+  background: #e2e2e265;
+  /* background: rgba(128, 0, 128, 0.3); */
+}
+
+.privacySettingOptionButtonPart{
+  /* border: 1px solid red; */
+  width: 1.2vw;
+  height: 1.2vw;
+  background: #cfcfcf;
+  /* background: purple; */
+}
+
+.mobileNoVisibleOut{
+  /* border: 1px solid red; */
+  margin: 3vw 0vw 2vw 0vw;
+  font-size: 1.2vw;
+}
+
+.mobileNoVisibleSelect{
+  font-size: 1.2vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2);
+  padding: 0.1vw 0vw;
+}
+
+.mobileNoVisibleSelect:hover{
+  border-bottom: 0.1vw solid black;
+}
+
+.changePassSetOut{
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 2vw; */
+}
+
+.changePassSetImg{
+  height: 1.3vw;
+  width: 1.3vw;
+  margin-right: 0.4vw;
+}
+
+.changePassSet{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2vw;
+  /* margin-bottom: 2vw; */
+}
+
+.blockedSettingOut{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 3vw;
+  width: 48vw;
+  /* display: none; */
+}
+
+.blockedSettingOptionImg{
+  height: 2vw;
+  width: 2vw;
+  margin-top: 5vw;
+}
+
+.blockedSettingOptionText{
+  font-size: 1.5vw;
+  margin-bottom: 5vw;
+  margin-top: 2vw;
+}
+
+.moreSettingOut{
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  width: 48vw;
+  background: #FFFFFF;
+}
+
+.settingOptionOut{
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 1vw;
+  width: 48vw;
+  /* height: 5vw; */
+  /* background: #FFFFFF; */
+  border-radius: 0.5vw;
+  display: none;
+}

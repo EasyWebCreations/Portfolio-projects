@@ -1,0 +1,65 @@
+
+body{
+    /* background-color:yellow; */
+   
+    /* background-image: url('bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: cover; */
+}
+
+
+.inputscal1{
+    margin-top: 90px;   
+}
+
+.input-group{
+    margin: auto;
+}
+.output{
+    display: flex;
+    margin-top: 35px;
+    margin: auto;
+    text-align: center;
+    
+    
+}
+.output p{
+    padding: 12px 25px;
+    margin: 0 auto;
+}
+.output span{
+    padding:0 50px;
+    margin: auto;
+    justify-content: center;
+
+
+    
+}
+.row{
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* #cal1{
+    min-height: 100vh;
+} */
+nav .navbar-nav a{
+    color: rgb(146, 224, 235) !important;
+}
+.bg{
+    font-size: 50px;
+    z-index: 1;
+    color: rgb(146, 224, 235);
+    /* margin: 0 auto; */
+    text-align: center;
+
+}
+button{
+    background-color:rgb(146, 224, 235) !important;
+    color: #012f42 !important;
+}
+#output2{
+    margin-bottom: 100px;
+}
+

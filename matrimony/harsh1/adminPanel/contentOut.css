@@ -1,0 +1,55 @@
+.contentOut{
+  /* border: 1px solid red; */
+  border-top: 0.1vw solid rgba(0, 0, 0, 0.1);
+  width: 78vw;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  top: 17vw;
+  right: 1vw;
+  max-height: calc(100vh - 19.5vw);
+  overflow-y: scroll;
+}
+
+#visitGraphScript{
+  display: none;
+}
+
+#registerGraphScript{
+  display: none;
+}
+
+#maleFemaleGraphScript{
+  display: none;
+}
+
+#chatGraphScript{
+  display: none;
+}
+
+#visitGraphCanvas{
+  width: 35vw;
+  /* height: 25vw; */
+}
+
+#registerGraphCanvas{
+  width: 17vw;
+  /* height: 18vw; */
+}
+
+#maleFemaleGraphCanvas{
+  width: 35vw;
+  /* height: 25vw; */
+}
+
+#chatGraphCanvas{
+  width: 35vw;
+  /* height: 25vw; */
+}
+
+/* .graphContainer{
+  border: 1px solid red;
+} */

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Table</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <!-- Icons font CSS-->
+  <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+  <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+  <!-- Font special for pages-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href="formstyle.css" rel="stylesheet" media="print">
+  <!-- Vendor CSS-->
+  <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+  <!-- Main CSS-->
+  <link href="formstyle.css" rel="stylesheet" media="all">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10%;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <img src="question.png" alt="a" srcset=""> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: cyan">MEDICLAIM or MF?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a class="nav-link active" aria-current="page" href="#" style="color: #fff"></a>
+          <a class="nav-link active" aria-current="page" href="#" style="color: #fff"></a>
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+
+    <!--
+
+<section>
+              <div class="col-lg-12">
+                <br>
+                <br>
+                <h1 class="text-danger">Normal Mediclaim Policy</h1>
+                <br>
+                <table id="tabledata" class="table table-striped table-hover table-bordered">
+                  <tr class="bg-dark text-white text-center">
+                    <th>Age</th>
+                    <th>Base Cover Premium</th>
+                    <th>Extra Cover Premium</th>
+                    <th>Total Premium</th>
+          </tr>
+          
+          
+          
+          <tr class="text-center bg-white text-dark">
+              <td>26-30</td>
+              <td>12626</td>
+              <td>6504</td>
+              <td>19130</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>31-35</td>
+              <td>13393</td>
+              <td>6750</td>
+              <td>20143</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>36-40</td>
+              <td>15104</td>
+              <td>7387</td>
+              <td>22491</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>41-45</td>
+              <td>17995</td>
+              <td>6856</td>
+              <td>24851</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>46-50</td>
+              <td>23718</td>
+              <td>8948</td>
+              <td>32666</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>51-55</td>
+              <td>30680</td>
+              <td>11486</td>
+              <td>42166</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>56-60</td>
+              <td>40533</td>
+              <td>14023</td>
+              <td>54556</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>61-65</td>
+              <td>56109</td>
+              <td>17466</td>
+              <td>73575</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>66-70</td>
+              <td>76641</td>
+              <td>20025</td>
+              <td>96666</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>71-75</td>
+              <td>97586</td>
+              <td>23773</td>
+              <td>121359</td>
+          
+            </tr>
+
+            <tr class="text-center bg-white text-dark">
+              <td>76-above</td>
+              <td>109681</td>
+              <td>23773</td>
+              <td>133454</td>
+          
+            </tr>
+                </table>
+
+          </div>
+            </section>
+-->
+
+
+    <section>
+      <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+          <div class="card card-4">
+            <div class="card-body" style="background-color: #E5E4E2;margin:1%">
+              <h2 class="title">Enter details</h2>
+              <form>
+
+
+                <div class="row">
+                  <div class="col">
+
+                    <label class="label">NAME</label>
+                    <input class="form-control" id="inputname" oninput="show()" type="text" name="name" required>
+
+                  </div>
+
+
+                  <div class="col">
+
+                    <label class="label">AGE</label>
+                    <input class="form-control" id="inputage" oninput="show()" type="number" name="age" required>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+
+                    <label class="label">Payment for Cover</label>
+                    <input class="form-control" id="payment" type="number" name="payment" required>
+
+                  </div>
+
+
+                  <div class="col">
+
+                    <label class="label">Payment for Topup Cover</label>
+                    <input class="form-control" id="premiumtopup" type="number" name="premiumtopup" required>
+
+
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col">
+
+                    <row>
+                      <label class="label">Hospital Expenditure Cover</label>
+                    </row>
+
+                    <!-- <select class="form-control" name="sumassured" id="sumassured">
+                      <option value="500000">500000</option>
+                    </select> -->
+                    <input class="form-control" id="sumassured" type="number" value="500000" name="sumassured" required>
+
+                  </div>
+
+                  <div class="col">
+
+                    <row>
+                      <label class="label">Hospi. Expenditure Top Up Cover</label>
+                    </row>
+
+                    <select class="form-control" name="sumassured_two" id="sumassured_two">
+
+                      <option value="5000000">5000000</option>
+                      <option value="1000000">1000000</option>
+                      <option value="2000000">2000000</option>
+                      <option value="3000000">3000000</option>
+                      <option value="4000000">4000000</option>
+
+                      <option value="6000000">6000000</option>
+                      <option value="7000000">7000000</option>
+                      <option value="8000000">8000000</option>
+                      <option value="9000000">9000000</option>
+                      <option value="10000000">10000000</option>
+
+
+                    </select>
+
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+
+                    <label class="label">Payment Term </label>
+
+                    <input class="form-control" id="numyears" type="number" name="numyears" value="20" required>
+
+
+                  </div>
+
+                  <div class="col">
+
+                    <label class="label">Expected Yield From Investment</label>
+
+                    <input class="form-control" id="rate" type="number" value="12" name="rate" required>
+
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+
+              <button type="button" class="btn btn-primary" id="subform"
+                onclick="GenerateTable(),GenerateTableTopup(),GenerateTableformutual(),document.getElementById('pdf').scrollIntoView();">Generate
+                Report</button>
+              <button class="btn btn-primary" onClick="window.location.reload();">Reset</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  </section>
+  <div class="container comptable" id="pdf" style="width:100%">
+    <div>
+
+
+      <img style="margin-top: 3.5%;margin-left:45%" class="center pdf" src="logo.svg" alt="" id="ig">
+
+      <div class="container justify-content-evenly d-flex"
+        style="margin-top: 2%; margin-right: auto !important; margin-left : 15%">
+        <h3 class="text-center font-italic d-inline position-">When
+          <strong>SILVER</strong> is on your <strong>HEAD</strong>, There must be <strong>GOLD</strong> in your
+          <strong>POCKET</strong>…
+        </h3>
+      </div>
+
+      <h1 id="trial" style="margin-top:5%;margin-left:20%;">MIRROR - MEDICLAIM or MF?</h1>
+      <!-- <img src="question.png" style="width:150px;height:130px;margin-top:1%;margin-bottom:3%;"> -->
+    </div>
+    <section>
+
+      <!-- <div style="display: flex;" class="row">
+        <div class="col" style="margin-right:2%">
+          <p>Name : </p>
+
+          <p id="print_name"> </p>
+        </div>
+        <div class="col" style="display: flex;">
+          <p>Age : </p>
+          <p id="print_age"></p>
+        </div>
+      </div> -->
+<!-- start -->
+
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="col" style="display: flex;margin-right:15%">
+      <h4>Name : </h4>
+      <h4 id="print_name"></h4>
+
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="col" style="display: flex;">
+      <h4>Age : </h4>
+      <h4 id="print_age"></h4>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="col" style="display: flex;margin-right:6%">
+      <h4> Mediclaim Policy Base Cover : </h4>
+      <h4 id="print_hebc"></h4>
+
+    </div>
+  </div>  
+  <div class="grid-item">
+    <div class="col" style="display: flex;">
+      <h4>Top up Cover : </h4>
+      <h4 id="print_hebc_two"></h4>
+    </div>
+  </div>
+  
+</div>
+
+<!-- njkdjs -->
+    
+
+    
+      <div id="table" class="row" style="display: flex;">
+        <div class="col instab" style="margin-right:2%">
+
+          <br>
+
+          <h4>(Option A)</h4>
+          <h4>Mediclaim Policy</h4>
+          <table class="table table-striped table-hover table-bordered" id="instable"
+            style="border: 5px solid #2196F3;padding: 1%;border-collapse: collapse;width: 100%;margin-right:3%">
+            <tr class="text-black text-center"
+              style="border: 1px solid black;padding: 1%;background-color:#c9e4f9;color:black;">
+              <td style="border: 1px solid black;padding: 1%;">Year</td>
+              <td style="border: 1px solid black;padding: 1%;">Age</td>
+              <td style="border: 1px solid black;padding: 1%;">Payment for Mediclaim</td>
+              <td style="border: 1px solid black;padding: 1%;">Total Payment</td>
+              <!-- <td style="border: 1px solid black;padding: 1%;">Payment for Topup Cover</td>
+              <td style="border: 1px solid black;padding: 1%;">Total Topup</td> -->
+            </tr>
+          </table>
+
+        </div>
+
+
+        <div class="col mutable" style="margin-right:2%">
+
+          <br>
+          <h4>(Option B)</h4>
+          <h4>Investment </h4>
+          <table class="table table-striped table-hover table-bordered" id="muttable"
+            style="border: 5px solid #2196F3;padding: 1%;border-collapse: collapse;width: 100%;">
+            <tr class="text-black text-center"
+              style="border: 1px solid black;padding: 1%;background-color:#c9e4f9;color:black;">
+              <td style="border: 1px solid black;padding: 1%;">Investment</td>
+              <td style="border: 1px solid black;padding: 1%;">Opening Value</td>
+              <td style="border: 1px solid black;padding: 1%;">Yield- <span id="yield"></span>%(Expected)</td>
+              <td style="border: 1px solid black;padding: 1%;">Closing Value</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="col instab" style="margin-right:2%">
+
+          <br>
+          <h4>(Topup Cover)</h4>
+          <h4>Recommended</h4>
+          <table class="table table-striped table-hover table-bordered" id="instable_topup"
+            style="border: 5px solid #2196F3;padding: 1%;border-collapse: collapse;width: 100%;">
+            <tr class="text-black text-center"
+              style="border: 1px solid black;padding: 1%;background-color:#c9e4f9;color:black;">
+
+              <td style="border: 1px solid black;padding: 1%;">Payment for Topup Cover</td>
+              <td style="border: 1px solid black;padding: 1%;">Total <br> Topup</td>
+            </tr>
+
+          </table>
+
+
+        </div>
+
+      </div>
+    </section>
+    <div class="mx-5 justify-content-center">
+      <h3 class="text-center font-italic"><strong>Considering the value of experience,
+          Deposit your trust with us…</strong></h3><hr>
+      <h6 class="text-xs" style="margin-left: 0rem !important; margin-right: 10rem !important;">Disclaimer : Mutual Fund investments
+          are subject to market risks, read all scheme related documents carefully. The
+          NAVs of the schemes may go up or down depending upon the factors and forces affecting the securities market
+          including the fluctuations in the interest rates.
+      </h6>
+  </div>
+
+
+ 
+   
+   
+   
+</div>
+
+  </div>
+  <div class="text-center">
+    <button onclick="pdf()" class="btn btn-primary"> Print </button>
+  </div>
+
+  <h4 class="text-center">Note: Mutual Fund investments are subject to market risks, read all scheme related documents
+    carefully.</h4>
+  <!-- Jquery JS-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Vendor JS-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <script src="vendor/datepicker/moment.min.js"></script>
+  <script src="vendor/datepicker/daterangepicker.js"></script>
+
+  <!-- Main JS-->
+  <script src="formjs.js"></script>
+
+</body>
+
+</html>

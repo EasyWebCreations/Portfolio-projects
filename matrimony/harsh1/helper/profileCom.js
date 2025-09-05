@@ -1,0 +1,1 @@
+var sideBarCapsule = document.getElementsByClassName("sideBarCapsule");

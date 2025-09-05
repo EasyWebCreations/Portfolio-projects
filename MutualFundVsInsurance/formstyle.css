@@ -1,0 +1,20 @@
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .card-4
+    {
+      width:330px;
+    }
+    #table
+    {
+      display:block;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    #table
+    {
+      display:flex;
+    }
+  } 

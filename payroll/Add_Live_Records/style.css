@@ -1,0 +1,16 @@
+
+
+.edit{
+    width: 100%;
+    height: 25px;
+}
+.editMode{
+    /*border: 1px solid black;*/
+ 
+}
+
+.txtedit{
+    display: none;
+    width: 99%;
+    height: 30px;
+}

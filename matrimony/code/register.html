@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(rgba(44, 1, 41, 0.6), rgba(252, 36, 223, 0.6));
+}
+
+body {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea,#msform select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #502c4d;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	font-size: 12px;
+	width: 120px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 12px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+#progressbar .active{
+	color: #baebce;
+}
+    </style>
+</head>
+<body>
+    <!-- multistep form -->
+	<ul id="progressbar">
+		<li class="active">Personal Details</li>
+		<li>Contact Details</li>
+		<li>More About You</li>
+		<li>Family Details</li>
+		<li>Birth & Zodiac</li>
+		<li>Address Details</li>
+	  </ul>
+<form id="msform" action="../backend/register.php" method="POST">
+    <!-- progressbar -->
+    
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Tell us about yourself</h2>
+      <h3 class="fs-subtitle">This is step 1</h3>
+      <input type="text" name="fname" id="fname" placeholder="First Name" />
+      <input type="text" name="lname" id="lname" placeholder="Last Name" />
+      <input type="date" name="dob" id="dob" placeholder="Date of Birth">
+        <select name="gender" id="gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select name="blood" id="blood">
+            <option value="" disabled selected>Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+		<div style="display:flex;">
+			<select name="height" id="height" >
+				<option value="" disabled selected>Height</option>
+				<option value="1 ft 0 inches">1 ft 0 inches</option>
+<option value="1 ft 1 inches">1 ft 1 inches</option>
+<option value="1 ft 2 inches">1 ft 2 inches</option>
+<option value="1 ft 3 inches">1 ft 3 inches</option>
+<option value="1 ft 4 inches">1 ft 4 inches</option>
+<option value="1 ft 5 inches">1 ft 5 inches</option>
+<option value="1 ft 6 inches">1 ft 6 inches</option>
+<option value="1 ft 7 inches">1 ft 7 inches</option>
+<option value="1 ft 8 inches">1 ft 8 inches</option>
+<option value="1 ft 9 inches">1 ft 9 inches</option>
+<option value="1 ft 10 inches">1 ft 10 inches</option>
+<option value="1 ft 11 inches">1 ft 11 inches</option>
+<option value="1 ft 12 inches">1 ft 12 inches</option>
+<option value="2 ft 0 inches">2 ft 0 inches</option>
+<option value="2 ft 1 inches">2 ft 1 inches</option>
+<option value="2 ft 2 inches">2 ft 2 inches</option>
+<option value="2 ft 3 inches">2 ft 3 inches</option>
+<option value="2 ft 4 inches">2 ft 4 inches</option>
+<option value="2 ft 5 inches">2 ft 5 inches</option>
+<option value="2 ft 6 inches">2 ft 6 inches</option>
+<option value="2 ft 7 inches">2 ft 7 inches</option>
+<option value="2 ft 8 inches">2 ft 8 inches</option>
+<option value="2 ft 9 inches">2 ft 9 inches</option>
+<option value="2 ft 10 inches">2 ft 10 inches</option>
+<option value="2 ft 11 inches">2 ft 11 inches</option>
+<option value="2 ft 12 inches">2 ft 12 inches</option>
+<option value="3 ft 0 inches">3 ft 0 inches</option>
+<option value="3 ft 1 inches">3 ft 1 inches</option>
+<option value="3 ft 2 inches">3 ft 2 inches</option>
+<option value="3 ft 3 inches">3 ft 3 inches</option>
+<option value="3 ft 4 inches">3 ft 4 inches</option>
+<option value="3 ft 5 inches">3 ft 5 inches</option>
+<option value="3 ft 6 inches">3 ft 6 inches</option>
+<option value="3 ft 7 inches">3 ft 7 inches</option>
+<option value="3 ft 8 inches">3 ft 8 inches</option>
+<option value="3 ft 9 inches">3 ft 9 inches</option>
+<option value="3 ft 10 inches">3 ft 10 inches</option>
+<option value="3 ft 11 inches">3 ft 11 inches</option>
+<option value="3 ft 12 inches">3 ft 12 inches</option>
+<option value="4 ft 0 inches">4 ft 0 inches</option>
+<option value="4 ft 1 inches">4 ft 1 inches</option>
+<option value="4 ft 2 inches">4 ft 2 inches</option>
+<option value="4 ft 3 inches">4 ft 3 inches</option>
+<option value="4 ft 4 inches">4 ft 4 inches</option>
+<option value="4 ft 5 inches">4 ft 5 inches</option>
+<option value="4 ft 6 inches">4 ft 6 inches</option>
+<option value="4 ft 7 inches">4 ft 7 inches</option>
+<option value="4 ft 8 inches">4 ft 8 inches</option>
+<option value="4 ft 9 inches">4 ft 9 inches</option>
+<option value="4 ft 10 inches">4 ft 10 inches</option>
+<option value="4 ft 11 inches">4 ft 11 inches</option>
+<option value="4 ft 12 inches">4 ft 12 inches</option>
+<option value="5 ft 0 inches">5 ft 0 inches</option>
+<option value="5 ft 1 inches">5 ft 1 inches</option>
+<option value="5 ft 2 inches">5 ft 2 inches</option>
+<option value="5 ft 3 inches">5 ft 3 inches</option>
+<option value="5 ft 4 inches">5 ft 4 inches</option>
+<option value="5 ft 5 inches">5 ft 5 inches</option>
+<option value="5 ft 6 inches">5 ft 6 inches</option>
+<option value="5 ft 7 inches">5 ft 7 inches</option>
+<option value="5 ft 8 inches">5 ft 8 inches</option>
+<option value="5 ft 9 inches">5 ft 9 inches</option>
+<option value="5 ft 10 inches">5 ft 10 inches</option>
+<option value="5 ft 11 inches">5 ft 11 inches</option>
+<option value="5 ft 12 inches">5 ft 12 inches</option>
+<option value="6 ft 0 inches">6 ft 0 inches</option>
+<option value="6 ft 1 inches">6 ft 1 inches</option>
+<option value="6 ft 2 inches">6 ft 2 inches</option>
+<option value="6 ft 3 inches">6 ft 3 inches</option>
+<option value="6 ft 4 inches">6 ft 4 inches</option>
+<option value="6 ft 5 inches">6 ft 5 inches</option>
+<option value="6 ft 6 inches">6 ft 6 inches</option>
+<option value="6 ft 7 inches">6 ft 7 inches</option>
+<option value="6 ft 8 inches">6 ft 8 inches</option>
+<option value="6 ft 9 inches">6 ft 9 inches</option>
+<option value="6 ft 10 inches">6 ft 10 inches</option>
+<option value="6 ft 11 inches">6 ft 11 inches</option>
+<option value="6 ft 12 inches">6 ft 12 inches</option>
+<option value="7 ft 0 inches">7 ft 0 inches</option>
+<option value="7 ft 1 inches">7 ft 1 inches</option>
+<option value="7 ft 2 inches">7 ft 2 inches</option>
+<option value="7 ft 3 inches">7 ft 3 inches</option>
+<option value="7 ft 4 inches">7 ft 4 inches</option>
+<option value="7 ft 5 inches">7 ft 5 inches</option>
+<option value="7 ft 6 inches">7 ft 6 inches</option>
+<option value="7 ft 7 inches">7 ft 7 inches</option>
+<option value="7 ft 8 inches">7 ft 8 inches</option>
+<option value="7 ft 9 inches">7 ft 9 inches</option>
+<option value="7 ft 10 inches">7 ft 10 inches</option>
+<option value="7 ft 11 inches">7 ft 11 inches</option>
+<option value="7 ft 12 inches">7 ft 12 inches</option>
+<option value="8 ft 0 inches">8 ft 0 inches</option>
+<option value="8 ft 1 inches">8 ft 1 inches</option>
+<option value="8 ft 2 inches">8 ft 2 inches</option>
+<option value="8 ft 3 inches">8 ft 3 inches</option>
+<option value="8 ft 4 inches">8 ft 4 inches</option>
+<option value="8 ft 5 inches">8 ft 5 inches</option>
+<option value="8 ft 6 inches">8 ft 6 inches</option>
+<option value="8 ft 7 inches">8 ft 7 inches</option>
+<option value="8 ft 8 inches">8 ft 8 inches</option>
+<option value="8 ft 9 inches">8 ft 9 inches</option>
+<option value="8 ft 10 inches">8 ft 10 inches</option>
+<option value="8 ft 11 inches">8 ft 11 inches</option>
+<option value="8 ft 12 inches">8 ft 12 inches</option>
+			</select>
+		<!-- <input type="text" placeholder="Height  (in inches)"> -->
+		<input type="number" name="age" id="age" placeholder="Age" style="margin-left: 5px;">
+		</div>
+		<select name="marital" id="marital">
+			<option value="" disabled>Martial status</option>
+			<option value="unmarried" selected>Unmarried</option>
+			<option value="married">Married</option>
+			<option value="single">Single</option>
+		</select>
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+        <h2 class="fs-title">Contact Details</h2>
+        <h3 class="fs-subtitle">Let's connect...</h3>
+        <input type="email" name="email" id="email" placeholder="Email Id" />
+        <input type="text" name="mobile" id="mobile" pattern="[6789][0-9]{9}" placeholder="Phone No  (Whatsapp)" />
+        <input type="tel" name="call" id="call" placeholder="Calling No">
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+	  <fieldset>
+		<h2 class="fs-title">More about you</h2>
+		<h3 class="fs-subtitle">Your info really matters for searching...</h3>
+		<input type="text" id="complexion" name="complexion" placeholder="Complexion">
+		<input type="text" id="mother_tongue" name="mother_tongue" placeholder="Mother tongue">
+		
+		<div class="edetails" style="display: flex;">
+			<div>
+				<select type="select" id="education" name="education">
+					<option value="" selected>Education</option>
+					<option value="SSC">SSC</option>
+					<option value="HSC">HSC</option>
+					<option value="Bachelor">Bachelor</option>
+					<option value="Master">Master</option>
+					<option value="PhD">PhD</option>
+					<option value="Other">Other</option>
+				</select>
+				<select id="occupation" name="occupation">
+					<option value="" selected>Occupation</option>
+					<option value="Business">Business</option>
+					<option value="Job">Job</option>
+					<option value="Doctor">Doctor</option>
+					<option value="Medical">Medical</option>
+					<option value="Bank">Bank</option>
+		
+					<option value="Insurance">Insurance</option>
+					<option value="Computers / IT">Computers / IT</option>
+					<option value="Advertising / Marketing ">Advertising / Marketing </option>
+					<option value="Civil">Civil</option>
+					<option value="Professional (CA, CS, CMA)">Professional (CA, CS, CMA)</option>
+		
+					<option value="Architecture">Architecture</option>
+					<option value="Administration Services">Administration Services</option>
+					<option value="Armed Forces">Armed Forces</option>
+					<option value="Fashion">Fashion</option>
+					<option value="Engineering / Technology">Engineering / Technology</option>
+		
+					<option value="Arts">Arts</option>
+					<option value="Finance">Finance</option>
+					<option value="Fine Arts">Fine Arts</option>
+					<option value="Home Sciences">Home Sciences</option>
+					<option value="Management">Management</option>
+		
+					<option value="Nursing / Health Sciences">Nursing / Health Sciences</option>
+					<option value="Science">Science</option>
+					<option value="Travel / Tourism">Travel / Tourism</option>
+					<option value="Office Administration">Office Administration</option>
+					<option value="Design">Design</option>
+				  </select>
+			</div>
+			<div style="margin-left: 5px;">
+				<input type="text" id="det_education" name="det_education" placeholder="Education detail">
+				<input type="text" id="det_occupation" name="det_occupation" placeholder="Occupation detail">
+			</div>
+		</div>
+		
+		
+		<select type="select" id="income" name="income">
+			<option value="" selected>Income  (LPA)</option>
+			<option value="Under - ₹ 50,000">Under - ₹ 50,000</option>
+			<option value="₹ 50,001 - 1,00,000">₹ 50,001 - 1,00,000</option>
+			<option value="₹ 1,00,001 - 2,00,000">₹ 1,00,001 - 2,00,000</option>
+			<option value="₹ 2,00,001 - 3,00,000">₹ 2,00,001 - 3,00,000</option>
+			<option value="₹ 3,00,001 - 4,00,000">₹ 3,00,001 - 4,00,000</option>
+			<option value="₹ 4,00,001 - 5,00,000">₹ 4,00,001 - 5,00,000</option>
+			<option value="₹ 5,00,001 - 6,00,000">₹ 5,00,001 - 6,00,000</option>
+
+			<option value="₹ 6,00,001 - 7,00,000">₹ 6,00,001 - 7,00,000</option>
+			<option value="₹ 7,00,001 - 8,00,000"> ₹ 7,00,001 - 8,00,000 </option>
+			<option value="₹ 8,00,001 - 9,00,000"> ₹ 8,00,001 - 9,00,000 </option>
+			<option value="₹ 9,00,001 - 10,00,000"> ₹ 9,00,001 - 10,00,000 </option>
+			<option value="₹ 10,00,001 - 12,00,000"> ₹ 10,00,001 - 12,00,000</option>
+
+			<option value="₹ 12,00,001 - 15,00,000"> ₹ 12,00,001 - 15,00,000</option>
+			<option value="₹ 15,00,001 - 20,00,000"> ₹ 15,00,001 - 20,00,000</option>
+			<option value="₹ 20,00,001 - 25,00,000"> ₹ 20,00,001 - 25,00,000</option>
+			<option value="₹ 25,00,001 - 30,00,000"> ₹ 25,00,001 - 30,00,000</option>
+			<option value="₹ 30,00,001 - and above"> ₹ 30,00,001 - and above</option>
+
+			<option value="Under $25,000"> Under $25,000</option>
+			<option value="$25,001 - 50,000"> $25,001 - 50,000 </option>
+			<option value="$50,000 - 75000 "> $50,000 - 75000 </option>
+			<option value="$75,001 - 1,00,000"> $75,001 - 1,00,000 </option>
+			<option value=" $1,00,001 - 1,25,000"> $1,00,001 - 1,25,000 </option>
+
+			<option value="$1,25,001 - 1,50,000"> $1,25,001 - 1,50,000</option>
+			<option value="$1,50,001 - 1,75,000"> $1,50,001 - 1,75,000 </option>
+			<option value="$1,75,001 - 2,00,000"> $1,75,001 - 2,00,000 </option>
+			<option value="$2,00,001 - and above"> $2,00,001 - and above </option>
+
+		  </select>
+        <textarea name="aboutme" id="about_me" placeholder="About yourself like what you like to do most..." cols="10" rows="5"></textarea>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	  </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Family details</h2>
+      <h3 class="fs-subtitle">Let's meet your family</h3>
+	  <div class="fdetails" style="display: flex;">
+		  <div>
+			<input type="text" id="mother_name" name="mother_name" placeholder="Mother name">
+			<input type="text" id="mname" name="mname" placeholder="Father name">
+		  </div>
+		  <div style="margin-left: 5px;">
+			<input type="text" id="mother_occupation" name="mother_occupation" placeholder="Mother occupation">
+			<input type="text" id="father_occupation" name="father_occupation" placeholder="Father occupation">
+		  </div>
+	</div>
+		
+		<!-- <input type="text" id="family_income" name="family_income" placeholder="Family income  (LPA)"> -->
+
+		<input type="text" id="siblings" name="siblings" placeholder="Siblings">
+		<div class="fdetails" style="display: flex;">
+			<div>
+				<input type="text" id="no_of_brothers" name="no_of_brothers" placeholder="No of Brother(s)">
+			</div>
+			<div style="margin-left: 5px;">
+				<input type="text" id="no_of_sisters" name="no_of_sisters" placeholder="No of Sister(s)">
+			</div>
+		</div>
+		<textarea maxlength="15" wrap="soft" id="brother_details" name="brother_details" placeholder="Brother's details  ('NA' if no brother)"></textarea>
+		<textarea maxlength="15" wrap="soft" id="sister_details" name="sister_details" placeholder="Sister's details  ('NA' if no sister)"></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+	<fieldset>
+		<h2 class="fs-title">Birth & Zodiac</h2>
+		<h3 class="fs-subtitle">Let's be religeous</h3>
+		<div class="fdetails" style="display: flex;">
+		<div>
+			<input type="text" id="birth_name" name="birth_name" placeholder="Birth name">
+		<input type="text" id="zodiac" name="zodiac" placeholder="Zodiac">
+		<select id="gotra1" name="gotra1">
+			<option value="" selected>Gotra 1</option>
+			<option value='Aankul'>Aankul</option>
+			<option value='Abhimanchkul'>Abhimanchkul</option>
+			<option value='Abhimankul'>Abhimankul</option>
+			<option value='Abhimanyukul'>Abhimanyukul</option>
+			<option value='Akumanchal'>Akumanchal</option>
+			<option value='Anantkul'>Anantkul</option>
+			<option value='Ankul'>Ankul</option>
+			<option value='Antakul'>Antakul</option>
+			<option value='Ayankul'>Ayankul</option>
+			<option value='Balshishta'>Balshishta</option>
+			<option value='Balshatal'>Balshatal</option>
+			<option value='Bhanukul'>Bhanukul</option>
+			<option value='Bibshatla'>Bibshatla</option>
+			<option value='Bomadshatla'>Bomadshatla</option>
+			<option value='Budhankul'>Budhankul</option>
+			<option value='Chandkul'>Chandkul</option>
+			<option value='Chandrakul'>Chandrakul</option>
+			<option value='Chandrashil'>Chandrashil</option>
+			<option value='Chidrupkul'>Chidrupkul</option>
+			<option value='Chilkul'>Chilkul</option>
+			<option value='Chilshil'>Chilshil</option>
+			<option value='Chinnakul'>Chinnakul</option>
+			<option value='Chitrapil'>Chitrapil</option>
+			<option value='Chennakul'>Chennakul</option>
+			<option value='Channakul'>Channakul</option>
+			<option value='Deokul'>Deokul</option>
+			<option value='Deoshatla'>Deoshatla</option>
+			<option value='Deoshetti'>Deoshetti</option>
+			<option value='Devshishta'>Devshishta</option>
+			<option value='Deshatla'>Deshatla</option>
+			<option value='Dhankul'>Dhankul</option>
+			<option value='Dhanshil'>Dhanshil</option>
+			<option value='Dikshkul'>Dikshkul</option>
+			<option value='Ebhrashatla'>Ebhrashatla</option>
+			<option value='Ebishatla'>Ebishatla</option>
+			<option value='Ekshakul'>Ekshakul</option>
+			<option value='Enkol'>Enkol</option>
+			<option value='Enkul'>Enkul</option>
+			<option value='Ennakul'>Ennakul</option>
+			<option value='Eshashishta'>Eshashishta</option>
+			<option value='Eshpal'>Eshpal</option>
+			<option value='Eshwakul'>Eshwakul</option>
+			<option value='Gandheshwar'>Gandheshwar</option>
+			<option value='Ganshatla'>Ganshatla</option>
+			<option value='Gaurshatla'>Gaurshatla</option>
+			<option value='Gondakulla'>Gondakulla</option>
+			<option value='Gondkul'>Gondkul</option>
+			<option value='Gontakul'>Gontakul</option>
+			<option value='Gunai'>Gunai</option>
+			<option value='Gundkul'>Gundkul</option>
+			<option value='Guntkul'>Guntkul</option>
+			<option value='Gandheshil'>Gandheshil</option>
+			<option value='Janukul'>Janukul</option>
+			<option value='Jenchkul'>Jenchkul</option>
+			<option value='Khushal'>Khushal</option>
+			<option value='Komarshatla'>Komarshatla</option>
+			<option value='Kumshatla'>Kumshatla</option>
+			<option value='Madankul'>Madankul</option>
+			<option value='Malshet'>Malshet</option>
+			<option value='Mandkul'>Mandkul</option>
+			<option value='Mankul'>Mankul</option>
+			<option value='Masantkul'>Masantkul</option>
+			<option value='Minkul'>Minkul</option>
+			<option value='Mithunkul'>Mithunkul</option>
+			<option value='Molukul'>Molukul</option>
+			<option value='Moonkul'>Moonkul</option>
+			<option value='Morkul'>Morkul</option>
+			<option value='Mulkul'>Mulkul</option>
+			<option value='Munikul'>Munikul</option>
+			<option value='Murkul'>Murkul</option>
+			<option value='Munjikula'>Munjikula</option>
+			<option value='Nabhilkul'>Nabhilkul</option>
+			<option value='Nabhilla'>Nabhilla</option>
+			<option value='Narali'>Narali</option>
+			<option value='Navshil'>Navshil</option>
+			<option value='Pabhal'>Pabhal</option>
+			<option value='Prabhal'>Prabhal</option>
+			<option value='Padgeshil'>Padgeshil</option>
+			<option value='Padgeshwar'>Padgeshwar</option>
+			<option value='Padmashatla'>Padmashatla</option>
+			<option value='Padmashil'>Padmashil</option>
+			<option value='Padmashishta'>Padmashishta</option>
+			<option value='Pagadikul'>Pagadikul</option>
+			<option value='Paidikul'>Paidikul</option>
+			<option value='Paidkul'>Paidkul</option>
+			<option value='Paitkul'>Paitkul</option>
+			<option value='Panaskul'>Panaskul</option>
+			<option value='Panchkul'>Panchkul</option>
+			<option value='Panshil'>Panshil</option>
+			<option value='Pansul'>Pansul</option>
+			<option value='Parashar'>Parashar</option>
+			<option value='Paulshishta'>Paulshishta</option>
+			<option value='Pawanshil'>Pawanshil</option>
+			<option value='Pendakul'>Pendakul</option>
+			<option value='Pendalkul'>Pendalkul</option>
+			<option value='Pendlikul'>Pendlikul</option>
+			<option value='Penlikul'>Penlikul</option>
+			<option value='Pennakul'>Pennakul</option>
+			<option value='Polishatla'>Polishatla</option>
+			<option value='Polshatla'>Polshatla</option>
+			<option value='Pongeshil'>Pongeshil</option>
+			<option value='Puchhakul'>Puchhakul</option>
+			<option value='Pulashatla'>Pulashatla</option>
+			<option value='Pulkul'>Pulkul</option>
+			<option value='Pulshetal'>Pulshetal</option>
+			<option value='Punavshil'>Punavshil</option>
+			<option value='Pungeshil'>Pungeshil</option>
+			<option value='Pungwshwar'>Pungwshwar</option>
+			<option value='Punjashil'>Punjashil</option>
+			<option value='Punyashil'>Punyashil</option>
+			<option value='Punyeshwar'>Punyeshwar</option>
+			<option value='Pushpal'>Pushpal</option>
+			<option value='Perushatla'>Perushatla</option>
+			<option value='Parishatla'>Parishatla</option>
+			<option value='Punsakul'>Punsakul</option>
+			<option value='Rankul'>Rankul</option>
+			<option value='Rantkul'>Rantkul</option>
+			<option value='Rentkul'>Rentkul</option>
+			<option value='Runtakul'>Runtakul</option>
+			<option value='Renukul'>Renukul</option>
+			<option value='Rontakul'>Rontakul</option>
+			<option value='Sankul'>Sankul</option>
+			<option value='Senshatla'>Senshatla</option>
+			<option value='Shaigol'>Shaigol</option>
+			<option value='Shaivgol'>Shaivgol</option>
+			<option value='Shankul'>Shankul</option>
+			<option value='Shayankul'>Shayankul</option>
+			<option value='Sheelkul'>Sheelkul</option>
+			<option value='Shirsal'>Shirsal</option>
+			<option value='Shirshatla'>Shirshatla</option>
+			<option value='Shrinikul'>Shrinikul</option>
+			<option value='Shrishal'>Shrishal</option>
+			<option value='Shrishatla'>Shrishatla</option>
+			<option value='Shrisheel'>Shrisheel</option>
+			<option value='Shrishishta'>Shrishishta</option>
+			<option value='Shrishreshta'>Shrishreshta</option>
+			<option value='Sirsal'>Sirsal</option>
+			<option value='Sirshatla'>Sirshatla</option>
+			<option value='Sudarshan'>Sudarshan</option>
+			<option value='Surkul'>Surkul</option>
+			<option value='Sursal'>Sursal</option>
+			<option value='Suryakul'>Suryakul</option>
+			<option value='Susal'>Susal</option>
+			<option value='Totkul'>Totkul</option>
+			<option value='Tulshishta'>Tulshishta</option>
+			<option value='Tulshitla'>Tulshitla</option>
+			<option value='Tulashatla'>Tulashatla</option>
+			<option value='Upankul'>Upankul</option>
+			<option value='Utkul'>Utkul</option>
+			<option value='Utkalkul'>Utkalkul</option>
+			<option value='Vachhakul'>Vachhakul</option>
+			<option value='Vastrakul'>Vastrakul</option>
+			<option value='Vatsakul'>Vatsakul</option>
+			<option value='Vinukul'>Vinukul</option>
+			<option value='Viparishatla'>Viparishatla</option>
+			<option value='Viparishishta'>Viparishishta</option>
+			<option value='Viprashatla'>Viprashatla</option>
+			<option value='Vishnukul'>Vishnukul</option>
+			<option value='Vishwakul'>Vishwakul</option>
+			<option value='Vishwapal'>Vishwapal</option>
+			<option value='Vikramshishta'>Vikramshishta</option>
+			<option value='Vikramshil'>Vikramshil</option>
+			<option value='Yalkul'>Yalkul</option>
+			<option value='Yalshat'>Yalshat</option>
+			<option value='Yalshatla'>Yalshatla</option>
+			<option value='Yalshatti'>Yalshatti</option>
+			<option value='Yalshishta'>Yalshishta</option>
+			<option value='Yankul'>Yankul</option>
+			<option value='Yannukul'>Yannukul</option>
+			<option value='Yenkul'>Yenkul</option>
+			<option value='Yetakul'>Yetakul</option>
+		  </select>
+		</div>
+		<div style="margin-left: 5px;">
+			<input type="time" id="birth_time" name="birth_time" placeholder="Birth time">
+			<input type="text" id="janma_tithi" name="janma_tithi" placeholder="Janma tithi">
+			<select id="gotra2" name="gotra2">
+				<option value="" selected>Gotra 2</option>
+                <option value='Aankul'>Aankul</option>
+                <option value='Abhimanchkul'>Abhimanchkul</option>
+                <option value='Abhimankul'>Abhimankul</option>
+                <option value='Abhimanyukul'>Abhimanyukul</option>
+                <option value='Akumanchal'>Akumanchal</option>
+                <option value='Anantkul'>Anantkul</option>
+                <option value='Ankul'>Ankul</option>
+                <option value='Antakul'>Antakul</option>
+                <option value='Ayankul'>Ayankul</option>
+                <option value='Balshishta'>Balshishta</option>
+                <option value='Balshatal'>Balshatal</option>
+                <option value='Bhanukul'>Bhanukul</option>
+                <option value='Bibshatla'>Bibshatla</option>
+                <option value='Bomadshatla'>Bomadshatla</option>
+                <option value='Budhankul'>Budhankul</option>
+                <option value='Chandkul'>Chandkul</option>
+                <option value='Chandrakul'>Chandrakul</option>
+                <option value='Chandrashil'>Chandrashil</option>
+                <option value='Chidrupkul'>Chidrupkul</option>
+                <option value='Chilkul'>Chilkul</option>
+                <option value='Chilshil'>Chilshil</option>
+                <option value='Chinnakul'>Chinnakul</option>
+                <option value='Chitrapil'>Chitrapil</option>
+                <option value='Chennakul'>Chennakul</option>
+                <option value='Channakul'>Channakul</option>
+                <option value='Deokul'>Deokul</option>
+                <option value='Deoshatla'>Deoshatla</option>
+                <option value='Deoshetti'>Deoshetti</option>
+                <option value='Devshishta'>Devshishta</option>
+                <option value='Deshatla'>Deshatla</option>
+                <option value='Dhankul'>Dhankul</option>
+                <option value='Dhanshil'>Dhanshil</option>
+                <option value='Dikshkul'>Dikshkul</option>
+                <option value='Ebhrashatla'>Ebhrashatla</option>
+                <option value='Ebishatla'>Ebishatla</option>
+                <option value='Ekshakul'>Ekshakul</option>
+                <option value='Enkol'>Enkol</option>
+                <option value='Enkul'>Enkul</option>
+                <option value='Ennakul'>Ennakul</option>
+                <option value='Eshashishta'>Eshashishta</option>
+                <option value='Eshpal'>Eshpal</option>
+                <option value='Eshwakul'>Eshwakul</option>
+                <option value='Gandheshwar'>Gandheshwar</option>
+                <option value='Ganshatla'>Ganshatla</option>
+                <option value='Gaurshatla'>Gaurshatla</option>
+                <option value='Gondakulla'>Gondakulla</option>
+                <option value='Gondkul'>Gondkul</option>
+                <option value='Gontakul'>Gontakul</option>
+                <option value='Gunai'>Gunai</option>
+                <option value='Gundkul'>Gundkul</option>
+                <option value='Guntkul'>Guntkul</option>
+                <option value='Gandheshil'>Gandheshil</option>
+                <option value='Janukul'>Janukul</option>
+                <option value='Jenchkul'>Jenchkul</option>
+                <option value='Khushal'>Khushal</option>
+                <option value='Komarshatla'>Komarshatla</option>
+                <option value='Kumshatla'>Kumshatla</option>
+                <option value='Madankul'>Madankul</option>
+                <option value='Malshet'>Malshet</option>
+                <option value='Mandkul'>Mandkul</option>
+                <option value='Mankul'>Mankul</option>
+                <option value='Masantkul'>Masantkul</option>
+                <option value='Minkul'>Minkul</option>
+                <option value='Mithunkul'>Mithunkul</option>
+                <option value='Molukul'>Molukul</option>
+                <option value='Moonkul'>Moonkul</option>
+                <option value='Morkul'>Morkul</option>
+                <option value='Mulkul'>Mulkul</option>
+                <option value='Munikul'>Munikul</option>
+                <option value='Murkul'>Murkul</option>
+                <option value='Munjikula'>Munjikula</option>
+                <option value='Nabhilkul'>Nabhilkul</option>
+                <option value='Nabhilla'>Nabhilla</option>
+                <option value='Narali'>Narali</option>
+                <option value='Navshil'>Navshil</option>
+                <option value='Pabhal'>Pabhal</option>
+                <option value='Prabhal'>Prabhal</option>
+                <option value='Padgeshil'>Padgeshil</option>
+                <option value='Padgeshwar'>Padgeshwar</option>
+                <option value='Padmashatla'>Padmashatla</option>
+                <option value='Padmashil'>Padmashil</option>
+                <option value='Padmashishta'>Padmashishta</option>
+                <option value='Pagadikul'>Pagadikul</option>
+                <option value='Paidikul'>Paidikul</option>
+                <option value='Paidkul'>Paidkul</option>
+                <option value='Paitkul'>Paitkul</option>
+                <option value='Panaskul'>Panaskul</option>
+                <option value='Panchkul'>Panchkul</option>
+                <option value='Panshil'>Panshil</option>
+                <option value='Pansul'>Pansul</option>
+                <option value='Parashar'>Parashar</option>
+                <option value='Paulshishta'>Paulshishta</option>
+                <option value='Pawanshil'>Pawanshil</option>
+                <option value='Pendakul'>Pendakul</option>
+                <option value='Pendalkul'>Pendalkul</option>
+                <option value='Pendlikul'>Pendlikul</option>
+                <option value='Penlikul'>Penlikul</option>
+                <option value='Pennakul'>Pennakul</option>
+                <option value='Polishatla'>Polishatla</option>
+                <option value='Polshatla'>Polshatla</option>
+                <option value='Pongeshil'>Pongeshil</option>
+                <option value='Puchhakul'>Puchhakul</option>
+                <option value='Pulashatla'>Pulashatla</option>
+                <option value='Pulkul'>Pulkul</option>
+                <option value='Pulshetal'>Pulshetal</option>
+                <option value='Punavshil'>Punavshil</option>
+                <option value='Pungeshil'>Pungeshil</option>
+                <option value='Pungwshwar'>Pungwshwar</option>
+                <option value='Punjashil'>Punjashil</option>
+                <option value='Punyashil'>Punyashil</option>
+                <option value='Punyeshwar'>Punyeshwar</option>
+                <option value='Pushpal'>Pushpal</option>
+                <option value='Perushatla'>Perushatla</option>
+                <option value='Parishatla'>Parishatla</option>
+                <option value='Punsakul'>Punsakul</option>
+                <option value='Rankul'>Rankul</option>
+                <option value='Rantkul'>Rantkul</option>
+                <option value='Rentkul'>Rentkul</option>
+                <option value='Runtakul'>Runtakul</option>
+                <option value='Renukul'>Renukul</option>
+                <option value='Rontakul'>Rontakul</option>
+                <option value='Sankul'>Sankul</option>
+                <option value='Senshatla'>Senshatla</option>
+                <option value='Shaigol'>Shaigol</option>
+                <option value='Shaivgol'>Shaivgol</option>
+                <option value='Shankul'>Shankul</option>
+                <option value='Shayankul'>Shayankul</option>
+                <option value='Sheelkul'>Sheelkul</option>
+                <option value='Shirsal'>Shirsal</option>
+                <option value='Shirshatla'>Shirshatla</option>
+                <option value='Shrinikul'>Shrinikul</option>
+                <option value='Shrishal'>Shrishal</option>
+                <option value='Shrishatla'>Shrishatla</option>
+                <option value='Shrisheel'>Shrisheel</option>
+                <option value='Shrishishta'>Shrishishta</option>
+                <option value='Shrishreshta'>Shrishreshta</option>
+                <option value='Sirsal'>Sirsal</option>
+                <option value='Sirshatla'>Sirshatla</option>
+                <option value='Sudarshan'>Sudarshan</option>
+                <option value='Surkul'>Surkul</option>
+                <option value='Sursal'>Sursal</option>
+                <option value='Suryakul'>Suryakul</option>
+                <option value='Susal'>Susal</option>
+                <option value='Totkul'>Totkul</option>
+                <option value='Tulshishta'>Tulshishta</option>
+                <option value='Tulshitla'>Tulshitla</option>
+                <option value='Tulashatla'>Tulashatla</option>
+                <option value='Upankul'>Upankul</option>
+                <option value='Utkul'>Utkul</option>
+                <option value='Utkalkul'>Utkalkul</option>
+                <option value='Vachhakul'>Vachhakul</option>
+                <option value='Vastrakul'>Vastrakul</option>
+                <option value='Vatsakul'>Vatsakul</option>
+                <option value='Vinukul'>Vinukul</option>
+                <option value='Viparishatla'>Viparishatla</option>
+                <option value='Viparishishta'>Viparishishta</option>
+                <option value='Viprashatla'>Viprashatla</option>
+                <option value='Vishnukul'>Vishnukul</option>
+                <option value='Vishwakul'>Vishwakul</option>
+                <option value='Vishwapal'>Vishwapal</option>
+                <option value='Vikramshishta'>Vikramshishta</option>
+                <option value='Vikramshil'>Vikramshil</option>
+                <option value='Yalkul'>Yalkul</option>
+                <option value='Yalshat'>Yalshat</option>
+                <option value='Yalshatla'>Yalshatla</option>
+                <option value='Yalshatti'>Yalshatti</option>
+                <option value='Yalshishta'>Yalshishta</option>
+                <option value='Yankul'>Yankul</option>
+                <option value='Yannukul'>Yannukul</option>
+                <option value='Yenkul'>Yenkul</option>
+                <option value='Yetakul'>Yetakul</option>
+              </select>
+		</div>
+		</div>
+		<input type="text" id="birth_place" name="birth_place" placeholder="Birth place">
+
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+      	<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+    <fieldset>
+      <h2 class="fs-title">Address Details</h2>
+      <h3 class="fs-subtitle">How to reach you</h3>
+      <select name="country" id="country">
+		<option  selected>Country</option>
+	  </select>
+	  <select name="state" id="state">
+		<option  selected>State</option>
+	  </select>
+	  <select name="city" id="city">
+		<option  selected>City</option>
+	  </select>
+	  <input type="text" id="c_district" name="c_district" placeholder="District">
+	  <input type="text" id="c_locality" name="c_locality" placeholder="Locality">
+	  <input type="text" id="c_landmark" name="c_landmark" placeholder="Landmark">
+	  <input type="text"  id="c_pincode" name="c_pincode" placeholder="Pincode">
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+	
+      <input type="button" onclick="checkInputField()" name="submit" class="submit action-button" value="Submit" />
+	  <input type="submit" hidden id="Submit" value="Submit">
+    </fieldset>
+  </form>
+
+
+  <script>
+      //jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+
+
+
+let auth_token;
+    $(document).ready(function() {
+      $('#country').on('click', function(e) {
+        // alert("clicked");
+		console.log('c');
+        $.ajax({
+          type: "get",
+          url: "https://www.universal-tutorial.com/api/getaccesstoken",
+          success: function(data) {
+            auth_token = data.auth_token;
+            getCountry(data.auth_token);
+          },
+          error: function(error) {
+            console.log(error);
+          },
+          headers: {
+            "Accept": "application/json",
+            "api-token": "3H4soPbzTdy9fH61jpsQmhB3Sw5SZskYPVd3BOUWQXF23NEkS-rLtu0TLMcQ5b6VZms",
+            "user-email": "mahajansangmeshwar024@gmail.com"
+          }
+        });
+        e.preventDefault();
+      });
+    });
+    $('#country').change(function() {
+      getState();
+    });
+    $('#state').change(function() {
+      getCity();
+    });
+
+    function getCountry() {
+      $.ajax({
+
+        type: "get",
+        url: "https://www.universal-tutorial.com/api/countries/",
+        success: function(data) {
+          data.forEach(element => {
+            $('#country').append('<option value="' + element.country_name + '">' + element.country_name + '</option>');
+          });
+          getState(auth_token);
+        },
+        error: function(error) {
+          console.log(error);
+        },
+        headers: {
+          "Authorization": "Bearer " + auth_token,
+          "Accept": "application/json"
+        }
+      });
+
+    }
+
+    function getState() {
+      var country_name = $('#country').val();
+      //var country_name = 'India';
+      $.ajax({
+
+        type: "get",
+        url: "https://www.universal-tutorial.com/api/states/" + country_name,
+        success: function(data) {
+          //getCity(auth_token);
+          $('#state').empty();
+          data.forEach(element => {
+            $('#state').append('<option value="' + element.state_name + '">' + element.state_name + '</option>');
+          });
+        },
+        error: function(error) {
+          console.log(error);
+        },
+        headers: {
+          "Authorization": "Bearer " + auth_token,
+          "Accept": "application/json"
+        }
+      });
+    }
+
+    function getCity() {
+      var state_name = $('#state').val();
+      //var state_name = 'Goa';
+      $.ajax({
+
+        type: "get",
+        url: "https://www.universal-tutorial.com/api/cities/" + state_name,
+        success: function(data) {
+          //console.log('ajax');
+          $('#city').empty();
+          data.forEach(element => {
+            $('#city').append('<option value="' + element.city_name + '">' + element.city_name + '</option>');
+          });
+        },
+        error: function(error) {
+          console.log(error);
+        },
+        headers: {
+          "Authorization": "Bearer " + auth_token,
+          "Accept": "application/json"
+        }
+      });
+    }
+
+	function checkInputField(){
+		let fname = $("#fname").val();
+        let lname = $("#lname").val();
+        let blood = $("#blood").val();
+        let mobile = $("#mobile").val();
+        let gender = $("#gender").val();
+        let dob = $("#dob").val();
+
+		let email = $("#email").val();
+		let call = $("#call").val();
+
+		let complexion = $("#complexion").val();
+        let mother_tongue = $("#mother_tongue").val();
+        let brother_details = $("#brother_details").val();
+        let sister_details = $("#sister_details").val();
+
+        let age = $("#age").val();
+        let about_me = $("#about_me").val();
+        let education = $("#education").val();
+        let det_education = $("#det_education").val();
+        let det_occupation = $("#det_occupation").val();
+        let no_of_brothers = $("#no_of_brothers").val();
+        let no_of_sisters = $("#no_of_sisters").val();
+
+        let income = $("#income").val();
+        let occupation = $("#occupation").val();
+        let height = $("#height").val();
+        let c_country = $("#country").val();
+
+        let c_landmark = $('#c_landmark').val();
+        let c_locality = $('#c_locality').val();
+        let c_city = $('#city').val();
+        let c_district = $('#c_district').val();
+        let c_state = $('#state').val();
+        let c_pincode = $('#c_pincode').val();
+
+        let mother_name = $("#mother_name").val();
+        let mname = $("#mname").val();
+        let mother_occupation = $("#mother_occupation").val();
+        let father_occupation = $("#father_occupation").val();
+        let siblings = $("#siblings").val();
+        // let janma_tithi = $("#janma_tithi").val();
+        // let zodiac = $("#zodiac").val();
+        // let birth_time = $("#birth_time").val();
+        // let gotra1 = $("#gotra1").val();
+        // let gotra2 = $("#gotra2").val();
+        // let birth_place = $("#birth_place").val();
+        let birth_name = $("#birth_name").val();
+
+		let submitBtn = $("#Submit");
+		if(fname != null && fname.trim() != "" && lname != null && lname.trim() != "" && blood != null && blood.trim() != "" && mobile != null && mobile.trim() != "" && gender != null && gender.trim() != "" && dob != null && dob.trim() != "" && complexion != null && complexion.trim() != "" && mother_tongue != null && mother_tongue.trim() != "" && brother_details != null && brother_details.trim() != "" && sister_details != null && sister_details.trim() != "" && about_me != null && about_me.trim() != "" && education != null && education.trim() != "" && no_of_brothers != null && no_of_brothers.trim() != "" && no_of_sisters != null && no_of_sisters.trim() != "" && income != null && income.trim() != "" && occupation != null && occupation.trim() != "" && height != null && height.trim() != "" && c_country != null && c_country.trim() != "" && c_landmark != null && c_landmark.trim() != "" && c_locality != null && c_locality.trim() != "" && c_city != null && c_city.trim() != "" && c_district != null && c_district.trim() != "" && c_state != null && c_state.trim() != "" && c_pincode != null && c_pincode.trim() != "" && mother_name != null && mother_name.trim() != "" && mname != null && mname.trim() != "" && mother_occupation != null && mother_occupation.trim() != "" && father_occupation != null && father_occupation.trim() != "" && siblings != null && siblings.trim() != "" && birth_name != null && birth_name.trim() != ""){
+			alert("Complete the payment proccess to confirm!");
+			submitBtn.click();
+		}else{
+			alert("Kindly fill all the details!");
+		}
+	}
+  </script>
+</body>
+</html>

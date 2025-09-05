@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk management</title>
+    <script src="index2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Varela+Round&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* #myTab-1{
+  
+  padding: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+} */
+
+        body {
+            background-image: url("bb.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            text-align: center;
+        }
+
+        .heading {
+            /* margin-left: 20%; */
+            margin-top: 3%;
+            /* margin-right: 4%;  */
+            font-family: 'Lora', serif;
+            /* margin-bottom: 3%; */
+            font-size: 3vw;
+            color: #864000;
+            /* font-size: 70px; */
+        }
+
+        .sub-heading {
+            font-size: 1.5vw;
+            font-family: 'Fredoka', sans-serif;
+            padding-bottom: 2%;
+            font-weight: bold;
+        }
+
+        select {
+            -webkit-appearance: menulist-button;
+            color: black;
+        }
+
+        select:invalid {
+            color: grey;
+        }
+
+        .nav {
+            /* padding: 2px; */
+            font-size: 20px;
+            /* border-bottom: 0px; */
+            /* margin-top: 20px; */
+        }
+
+        /*.nav .nav-tabs {
+             border-bottom: 0px;
+  border: 1px solid transparent; 
+        }*/
+
+        #myTab-1 {
+            border-bottom: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #myTab-2 {
+            border-bottom: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #myTab-3 {
+            border-bottom: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #myTab-4 {
+            border-bottom: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #myTab-5 {
+            border-bottom: 0px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* .mine {
+      border: 1px solid rgb(170, 168, 168);
+      background-color: #F0ECE3;
+
+      box-shadow: 5px 10px #888888;
+      
+      margin: 20px;
+      padding: 10px;
+    } */
+
+        .nav .nav-link {
+            color: #1d1d1d;
+            /* padding: 0; */
+            padding: 0;
+            margin: 6%;
+            /* align-items: center; */
+            vertical-align: middle;
+        }
+
+        .nav .nav-link:hover {
+            transform: scale(1.1);
+            color: black;
+        }
+
+        /* .nav .nav-link .active {
+            border-bottom: 3px solid black;
+        } */
+
+        .demo {
+            font-family: 'Orelega One', cursive;
+            font-size: 25px;
+        }
+
+        .nav-item {
+            display: inline-block;
+            width: 250px;
+            height: 85px;
+            background-color: #92A9BD !important;
+            color: #F7F7F7 !important;
+            padding: 10px;
+            margin: 0%;
+            vertical-align: middle;
+            text-decoration: none;
+            text-align: center;
+            /* font: normal 18px/20px Roboto, san-serf; */
+            /* Font: Font-style Font-weight Font-size/line-height Font-family */
+            cursor: pointer;
+            /* margin-left: -4px; */
+            /* transition: all .3s ease-in-out; */
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 370;
+        }
+
+        #body6-tab {
+            margin: 2%;
+        }
+
+        #body7-tab {
+            margin: 2%;
+        }
+
+        #body11-tab {
+            margin: 2%;
+        }
+
+        input[type="number"] {
+
+            font-weight: 370;
+            color: black;
+        }
+
+        input[type="text"] {
+
+            font-weight: 370;
+            color: black;
+        }
+
+        @media (max-width: 825px) {
+            img#yourImage {
+                display: none;
+            }
+        }
+
+        .pdf {
+            visibility: hidden;
+        }
+
+        .pdf-1 {
+            border: 2px solid black;
+            margin: 10%;
+        }
+
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+            padding: 1%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .p1 {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .p2 {
+            border: 1px solid black;
+        }
+
+        #pro {
+            width: 50%;
+        }
+
+        .header {
+            background-color: orange;
+            text-align: center;
+        }
+
+        .option {
+            background-color: #f2f2f2;
+        }
+
+        /* #base-death{
+            float: left;
+        } */
+
+        /* CSS */
+
+
+
+
+
+        @media (max-width: 768px) {
+            .base-c {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sub-heading {
+                font-size: 3vw;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: cyan">Risk management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #fff"></a>
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #fff"></a>
+                    <a class="nav-link active" aria-current="page" onclick="PrintElem()"
+                        style="color: #fff; cursor: pointer;">Print pdf</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div style="text-align: center;">
+            <!-- <h1 class="heading">
+                Risk Management</h1> -->
+            <!-- <img src="risk icon.svg" id="yourImage" style="width:150px;height:130px;margin-top:2%"> -->
+        </div>
+
+        <form action="" method="post">
+            <div class="col-lg-7 mx-auto" id="card">
+                <div class="mine" id="data">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="sub-heading">Enter Your Name<h4>
+                                    <input class="form-control" type="text" placeholder="Full Name" id="full-name">
+                        </div>
+                        <!-- dsd -->
+                        <div class="col">
+                            <div style="display: block;">
+                                <h3 class="sub-heading">Select Category</h3>
+                                <select class="form-control" style="width:100%" aria-label=".form-select-sm example"
+                                    id="risk-class" onchange="myFunction20()" required>
+                                    <option value="">Select your risk class</option>
+                                    <option value="1">Category I</option>
+                                    <option value="2">Category II</option>
+                                    <option value="3">Category III</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <label class="label">Enter yearly income of last 3 years</label>
+                    <!-- <p class="mb-4" style="text-align: center;"> Enter yearly income of last 3 years</p> -->
+                    <div class="row" id="id">
+                        <div class="col-sm-4">
+                            <div>
+                                <input class="form-control" type="number" placeholder="1st year Income"
+                                    id="first_income" value="1200000" onfocusout="myFunction20()"><br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div>
+                                <input class="form-control" type="number" placeholder="2nd year Income"
+                                    id="second_income" value="1100000" onfocusout="myFunction20()"> <br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div>
+                                <input class="form-control" type="number" placeholder="3rd year Income"
+                                    id="third_income" value="1000000" onfocusout="myFunction20()"><br>
+                            </div>
+                        </div>
+                        <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="company" onchange="ShowHideDiv(), ShowHideDiv2()" required>
+                        <option value="">Select Insurance Company</option>
+                        <option value="bajaj">Bajaj</option>
+                        <option value="other">Other company</option>
+                    </select> -->
+
+                        <!--For Bajaj Company-->
+
+                        <label class="label">Your average monthly income</label>
+                        <div class="btn btn-secondary btn-lg" id="avg_value" style="width:50%;margin-left:25%;">Show !
+                        </div>
+                        <br>
+                        <!-- <p class="demo" ></p>
+                    <div class="bajajdata" id="bajajdata"> -->
+
+                        <!-- <div class="input-group input-group-lg mb-3" >
+                            <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="risk-class" onchange="myFunction20()" required>
+                                <option value="">Select your risk class</option>
+                                <option value="1">Category I</option>
+                                <option value="2">Category II</option>
+                                <option value="3">Category III</option>
+                            </select>
+                        </div> -->
+
+                        <label class="label" style="margin-top:2%">BASE COVER RATE</label>
+                        <!-- <p class="mb-4">Select your risk class</p> -->
+                        <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="risk-class"
+                        onchange="myFunction2()">
+                        <option value="">Risk Class</option>
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        </select> -->
+                        <!-- <p class="mb-4">Select category</p> -->
+
+                        <!-- <select class="form-select form-select-lg mb-5" id="category" onchange="myFunction2()">
+                            <option value="">Select Category</option>
+                            <option value="1">Death</option>
+                            <option value="2">Permanent Total Disability</option>
+                            <option value="3">Permanent Partial Disability</option>
+                        </select> -->
+
+                        <div class="base-c row" style="display:flex;">
+                            <div class="col">
+                                <label style="padding-left:10px;" for="a">Death &ensp;&ensp;&ensp;</label>
+                                <input class="form-control" style="height:40px" type="number" placeholder="Death"
+                                    id="base-death"><br>
+                            </div>
+                            <div class="col">
+                                <label style="padding-left:10px;" for="a">base-PTD &nbsp</label>
+                                <input class="form-control" style="height:40px" type="number"
+                                    placeholder="Permanent Total Disability" id="base-PTD"><br>
+                            </div>
+                            <div class="col">
+                                <label style="padding-left:10px;" for="a">base-PPD &nbsp</label>
+                                <input class="form-control" style="height:40px" type="number"
+                                    placeholder="Permanent Partial Disability" id="base-PPD"><br>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="label">
+                                    Accidental Hospi. Expenses
+                                </label>
+                                <!-- <p class="mb-4">Select the Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="mySelect"
+                                    onchange="myFunction()">
+                                    <option value="1255">2500000</option>
+                                    <option value="441">200000</option>
+                                    <option value="509">300000</option>
+                                    <option value="628">400000</option>
+                                    <option value="695">500000</option>
+                                    <option value="729">600000</option>
+                                    <option value="763">700000</option>
+                                    <option value="794">800000</option>
+                                    <option value="821">900000</option>
+                                    <option value="848">1000000</option>
+                                    <option value="875">1100000</option>
+                                    <option value="902">1200000</option>
+                                    <option value="930">1300000</option>
+                                    <option value="957">1400000</option>
+                                    <option value="984">1500000</option>
+                                    <option value="1011">1600000</option>
+                                    <option value="1038">1700000</option>
+                                    <option value="1065">1800000</option>
+                                    <option value="1092">1900000</option>
+                                    <option value="1120">2000000</option>
+                                    <option value="1147">2100000</option>
+                                    <option value="1174">2200000</option>
+                                    <option value="1201">2300000</option>
+                                    <option value="1228">2400000</option>
+                                    <option value="1255">2500000</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="label">Air Ambulance Cover</label>
+                                <!-- <p class="mb-4">Select the Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="mySelect2"
+                                    onchange="myFunction4()">
+                                    <option value="0">Select the Sum Insured</option>
+                                    <option value="65">500000</option>
+                                    <option value="130">1000000</option>
+                                    <option value="195">1500000</option>
+                                    <option value="260">2000000</option>
+                                    <option value="325">2500000</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="label">Children Education Benefit</label>
+                                <!-- <p class="mb-4">Select your risk class</p>
+                        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm     example" id="risk-class5"
+                            onchange="myFunction5()">
+                            <option value="">Risk Class</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                        </select> -->
+                                <!-- <p class="mb-4">Select Sum Insured</p> -->
+
+
+                                <select class="form-control" aria-label=".form-select-sm example" id="sum5"
+                                    onchange="myFunction5()">
+                                    <option value="0">Select Sum Insured</option>
+                                    <option value="1">100000</option>
+                                    <option value="2">200000</option>
+                                    <option value="3">300000</option>
+                                    <option value="4">400000</option>
+                                    <option value="5">500000</option>
+                                    <option value="6">600000</option>
+                                    <option value="7">700000</option>
+                                    <option value="8">800000</option>
+                                    <option value="9">900000</option>
+                                    <option value="10">1000000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="label">Coma due to Accidental Bodily Injury</label>
+                                <!-- <p class="mb-4">Select the Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="Sum-6"
+                                    onchange="myFunction6()">
+                                    <option value="0">Select the Sum Insured</option>
+                                    <option value="26">100000</option>
+                                    <option value="52">200000</option>
+                                    <option value="78">300000</option>
+                                    <option value="104">400000</option>
+                                    <option value="130">500000</option>
+                                    <option value="156">600000</option>
+                                    <option value="182">700000</option>
+                                    <option value="208">800000</option>
+                                    <option value="234">900000</option>
+                                    <option value="260">1000000</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="label">
+                                    EMI payment Cover (For 3 EMI)
+                                </label>
+                                <!-- <p class="mb-4">Select your risk class</p>
+                        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="risk-class7"
+                            onchange="myFunction7()">
+                            <option value="0">Risk Class</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                        </select> -->
+                                <!-- <p class="mb-4">Select Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="sum7"
+                                    onchange="myFunction7()">
+                                    <option value="0">Select Sum Insured</option>
+                                    <option value="1">50000</option>
+                                    <option value="2">75000</option>
+                                    <option value="3">100000</option>
+                                    <option value="4">200000</option>
+                                    <option value="5">300000</option>
+                                    <option value="6">400000</option>
+                                    <option value="7">500000</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+
+                                <label class="label">Fracture Care Section</label>
+                                <!-- <p class="mb-4">Select the Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="Sum-8"
+                                    onchange="myFunction8()">
+                                    <option value="0">Select the Sum Insured</option>
+                                    <option value="173">50000</option>
+                                    <option value="260">75000</option>
+                                    <option value="347">100000</option>
+                                    <option value="694">200000</option>
+                                    <option value="1041">300000</option>
+                                    <option value="1388">400000</option>
+                                    <option value="1735">500000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <h3>Hospital Cash Benefit</h3>
+                        <button class="btn btn-secondary btn-lg" onclick="myFunction14()">Know Premium  !</button> -->
+                        <!-- <h3 class="sub-heading">Adventure Sport Benefits</h3> -->
+                        <!-- <p class="mb-4">Select Rate</p> -->
+                        <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="rate3" onchange="myFunction3()">
+                            <option value="">Select Rate</option>
+                            <option value="1">25%</option>
+                            <option value="2">50%</option>
+                            <option value="3">100%</option>
+                        </select> -->
+                        <!-- <p class="mb-4">Select your risk class</p>
+                        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm     example" id="risk-class3"
+                            onchange="myFunction3()">
+                            <option value="">Risk Class</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                        </select> -->
+                        <!-- <p class="mb-4">Select Cover</p> -->
+                        <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="cover3" onchange="myFunction3()">
+                            <option value="">Select Cover</option>
+                            <option value="1">Death</option>
+                            <option value="2">Permanent Total Disability</option>
+                        </select> -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="label">
+                                    Loan Protector Cover
+                                </label>
+                                <!-- <h3>Loan Protector Cover</h3> -->
+                                <!-- <p class="mb-4">Select Risk Class</p> -->
+                                <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example" id="risk-class10"
+                        onchange="myFunction10()">
+                        <option value="0">Risk Class</option>
+                        <option value="0.48">1</option>
+                        <option value="0.86">2</option>
+                        <option value="1.3">3</option>
+                        </select> -->
+                                <!-- <p class="mb-4" style="text-align: center;"> Enter the loan Amount</p> -->
+                                <div>
+                                    <input class="form-control" type="number" placeholder="Enter the loan Amount"
+                                        id="loan"><br><br>
+                                </div>
+
+                                <!-- <h3>Loss of Income due to Disability from Accident</h3> -->
+                                <!-- <p class="mb-4">Select Risk Class</p>
+                        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm     example" id="risk-class11"
+                            onchange="myFunction15()">
+                            
+                            <option value="0">Risk Class</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select> -->
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label class="label">Road Ambulance Cover</label>
+                                <!-- <p class="mb-4">Select Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="Sum-12"
+                                    onchange="myFunction12()">
+                                    <!-- <option value="0">Select Sum Insured</option> -->
+                                    <option value="55">25000</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4">
+
+                                <label class="label">Travel Expenses Benefit</label>
+                                <!-- <p class="mb-4">Select Sum Insured</p> -->
+                                <select class="form-control" aria-label=".form-select-sm example" id="Sum-13"
+                                    onchange="myFunction13()">
+                                    <!-- <option value="0">Select Sum Insured</option> -->
+                                    <option value="71">25000</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!-- For other company!!!!!!!!!-->
+
+
+                        <!-- <div class="otherdata" id="otherdata" style="display: none">
+                        <h3 class="sub-heading">Class</h3>
+                        <div class="input-group input-group-lg mb-3">
+                            <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example"
+                                id="classothercompany" required>
+                                <option value="0">Class</option>
+                                <option value="1">I</option>
+                                <option value="2">II</option>
+                                <option value="3">III</option>
+                            </select>
+                        </div>
+                        <h3 class="sub-heading">Sum Assured</h3> -->
+                        <!-- <p class="mb-4">Select the Sum Insured</p> -->
+                        <!-- <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example"
+                            id="sumassured" onchange="premiumprint()">
+                            <option value="0">Select the Sum Insured</option>
+                            <option value="1">10000000 (1cr)</option>
+                            <option value="2">20000000 (2cr)</option>
+                            <option value="5">50000000 (5cr)</option>
+
+                        </select>
+                        <div class="PrintPremium" id="printpremium">
+                            <h3 class="sub-heading">Premium</h3>
+                        </div> -->
+                        <!-- <p class="mb-4">Select the Sum Insured</p> -->
+
+
+                        <!-- </div> -->
+
+                        <button class="btn btn-primary" onclick="PrintElem()"
+                            style="width:20%;margin-left:37%;margin-top:-4%">Print</button>
+                        <!-- <button class="button-print" onclick="PrintElem()">Print</button> -->
+                    </div>
+                </div>
+        </form>
+        <!-- HTML !-->
+        <!-- <button type="submit" onclick="newFunction()">Submit</button> -->
+    </div>
+
+    <div class="pdf" id="pdf">
+        <div class="pdf-1">
+            <table>
+                <tr>
+                    <th class="header" colspan="3" scope="colgroup">The Way for Risk Management</th>
+                </tr>
+                <tr>
+                    <td class="option">Name :</td>
+                    <td id="name-dis" colspan="2">NULL</td>
+                </tr>
+
+                <tr>
+                    <td class="option">Monthly Average income :</td>
+                    <td id="inc-1" colspan="2">0</td>
+                </tr>
+
+
+                <tr>
+                    <th class="header" colspan="3" scope="colgroup" style="background-color: orange;" id="base-cover">
+                        BASE COVER
+                    </th>
+                </tr>
+
+                <tr>
+                    <td class="option">Death </td>
+                    <td id="inc-2">0</td>
+                    <td id="pre-1">0</td>
+                </tr>
+                <tr>
+                    <td class="option">PTD</td>
+                    <td id="inc-3">0</td>
+                    <td id="pre-2">0</td>
+                </tr>
+                <tr>
+                    <td class="option">PPD</td>
+                    <td id="inc-4">0</td>
+                    <td id="pre-3">0</td>
+                </tr>
+
+                <tr class="header">
+                    <th class="header" colspan="3" scope="colgroup">ADD ON COVER</th>
+                </tr>
+
+                <tr>
+                    <td class="option">1] Accidental Hospitalisation</td>
+                    <td id="select1">0</td>
+                    <td id="value1">0</td>
+                </tr>
+                <tr>
+                    <td class="option">2] Air Ambulance</td>
+                    <td id="select2">0</td>
+                    <td id="value2">0</td>
+                </tr>
+                <tr>
+                    <td class="option">3] Child Education</td>
+                    <td id="select3">0</td>
+                    <td id="value3">0</td>
+                </tr>
+                <tr>
+                    <td class="option">4] COMA dut to Accident</td>
+                    <td id="select4">0</td>
+                    <td id="value4">0</td>
+                </tr>
+                <tr>
+                    <td class="option">5] EMI Payment</td>
+                    <td id="select5">0</td>
+                    <td id="value5">0</td>
+                </tr>
+                <tr>
+                    <td class="option">6] Fracture Care</td>
+                    <td id="select6">0</td>
+                    <td id="value6">0</td>
+                </tr>
+                <tr>
+                    <td class="option">7] Hospital Cash</td>
+                    <td id="select7">0</td>
+                    <td id="value7">0</td>
+                </tr>
+                <tr>
+                    <td class="option">8] Loan Protector</td>
+                    <td id="select8">0</td>
+                    <td id="value8">0</td>
+                </tr>
+                <tr>
+                    <td class="option">9] Loss of income <br> (Weekly upto 100 Week)
+                    </td>
+                    <td id="select9">0</td>
+                    <td id="value9">0</td>
+                </tr>
+                <tr>
+                    <td class="option">10] Travel Expences Benefit</td>
+                    <td id="select10">0</td>
+                    <td id="value10">0</td>
+                </tr>
+                <tr>
+                    <td class="option">11] Road Ambulance</td>
+                    <td id="select11">0</td>
+                    <td id="value11">0</td>
+                </tr>
+                <tbody>
+                    <tr>
+                        <th rowspan="3">
+                            <!-- <img id="pro" src="promotion.jpeg" alt="" srcset=""> -->
+                        </th>
+                        <td>Premium Rs.</td>
+                        <td id="premium-value">0</td>
+                    </tr>
+                    <tr>
+                        <td>GST 18%</td>
+                        <td id="gst">0</td>
+                    </tr>
+                    <tr>
+                        <td>Final Amt Rs.</td>
+                        <td id="total-amount">0</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="p1 header">
+                <h5> Considering the value of exprience deposit your trust with us</h5>
+            </div>
+            <div class="p1 header">
+                <h5> Suresh G. Lahoti - Mobile No.9422176882</h5>
+                <h5> Email - suresh.lahoti@rediffmail.com</h5>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        // $("#btnPrint").live("click", function () {
+        //   var divContents = $("#text").html();
+        //   var printWindow = window.open('', '', 'height=400,width=800');
+        //   printWindow.document.write('<html><head><title></title>');
+        //   printWindow.document.write('</head><body>');
+        //   printWindow.document.write('');
+        //   printWindow.document.write('</body></html>');
+        //   printWindow.document.close();
+        //   printWindow.print();
+        // });
+        function PrintElem() {
+            var a1 = display();
+            var a2 = myFunction();
+            var a3 = myFunction4();
+            var a4 = myFunction5();
+            var a5 = myFunction6();
+            var a6 = myFunction7();
+            var a7 = myFunction8();
+            var a8 = myFunction10();
+            var a9 = myFunction12();
+            var a10 = myFunction13();
+            var a11 = myFunction14();
+            var a12 = myFunction15();
+            var b = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12;
+            var numb = (b * 18) / 100;
+            var rounded = Math.round((numb + Number.EPSILON) * 100) / 100;
+            var numb2 = b + rounded;
+
+            //  document.getElementById("premium-value").innerHTML = b
+            // document.getElementById("gst").innerHTML = rounded;
+            //document.getElementById("total-amount").innerHTML = numb2;
+            document.getElementById("premium-value").innerHTML = Math.round(b)
+            document.getElementById("gst").innerHTML = Math.round(rounded);
+            document.getElementById("total-amount").innerHTML = Math.round(numb2);
+            // var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+            var mywindow = window.open('', '', 'height=500,width=600');
+
+            mywindow.document.write('<html><head><title></title>');
+
+            mywindow.document.write('<style>' +
+                ".pdf{padding: 15%;border:1px solid black;}" +
+                "table,td,tr {border: 1px solid black;padding: 1%;}" +
+                "table {border-collapse: collapse;width: 100%;}" +
+                ".p1{border: 1px solid black;}" +
+                ".p2 {border: 1px solid black;}" +
+                "#pro {width: 20%;}" +
+                ".header{background-color: orange;text-align: center;}" +
+                ".option{background-color:  #f2f2f2;}" +
+                '</style>');
+            var logo_heading = '<div class="container justify-content-evenly d-flex"style="margin-top: 2%; margin-right: auto !important; margin-left : 15%"><h4 class="text-center font-italic d-inline position-">When <strong>SILVER</strong> is on your <strong>HEAD</strong>, There must be <strong>GOLD</strong> in your<strong> POCKET</strong>…</h4></div>';
+            mywindow.document.write('</head><body ><img style="margin-top: 3.5%;margin-left:45%;max-height:5%" class="center " src="logo.svg" alt="" id="ig">');
+            mywindow.document.write(logo_heading);
+            mywindow.document.write(document.getElementById("pdf").innerHTML);
+            mywindow.document.write('</body></html>');
+
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10*/
+            setTimeout(function () {
+                mywindow.print();
+                mywindow.close();
+            }, 1000);
+            // mywindow.print();
+            // mywindow.close();
+            // mywindow.close();
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

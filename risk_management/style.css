@@ -1,0 +1,125 @@
+/* #myTab-1{
+  
+  padding: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+} */
+body{
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+}
+.nav{
+  /* padding: 2px; */
+  font-size: 20px;
+  /* border-bottom: 0px; */
+  /* margin-top: 20px; */
+}
+.nav .nav-tabs{
+  /* border-bottom: 0px;
+  border: 1px solid transparent; */
+}
+
+#myTab-1{
+  border-bottom: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+#myTab-2{
+  border-bottom: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+#myTab-3{
+  border-bottom: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+#myTab-4{
+  border-bottom: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+#myTab-5{
+  border-bottom: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.mine{
+  border: 1px solid rgb(170, 168, 168);
+  background-color: #F0ECE3;
+
+  box-shadow: 5px 10px #888888;
+  /* border-radius: 7px; */
+  margin: 20px;
+  padding: 10px;
+}
+.nav .nav-link{
+  color: #1d1d1d;
+  /* padding: 0; */
+  padding: 0;
+  margin: 6%;
+  /* align-items: center; */
+  vertical-align: middle;
+}
+.nav .nav-link:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+/* .nav .nav-link .active {
+  border-bottom: 3px solid black;
+} */
+
+.demo{
+  font-family: 'Orelega One', cursive;
+  font-size: 25px;
+}
+.nav-item {
+  display: inline-block;
+  width: 250px;
+  height: 85px;
+  background-color: #92A9BD!important;
+  color: #F7F7F7!important;
+  padding: 10px;
+  margin: 0%;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  /* font: normal 18px/20px Roboto, san-serf; */
+  /* Font: Font-style Font-weight Font-size/line-height Font-family */
+  cursor: pointer;
+  /* margin-left: -4px; */
+  /* transition: all .3s ease-in-out; */
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 370;
+}
+#body6-tab{
+  margin: 2%;
+}
+#body7-tab{
+  margin: 2%;
+}
+#body11-tab{
+  margin: 2%;
+}
+@media only screen and (max-width: 600px) {
+  #card{
+    width:95%;
+  }
+  #id
+  {
+    display: flex;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  #id
+  {
+    display: flex;
+  }
+#card
+{
+  width:80%;
+}
+}

@@ -1,0 +1,628 @@
+@media screen and (min-width: 721px) {
+  .sideBar {
+    /* border: 1px solid red; */
+    position: fixed;
+    top: 7.5vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 24vw;
+    /* border-right: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    /* border-bottom: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    /* padding: 0vw 1vw 1vw 1vw; */
+    /* height: 50vw; */
+    padding-bottom: 1vw;
+    background: #FFFFFF;
+    visibility: visible;
+    max-height: calc(100vh - 10vw);
+    /* min-height: calc(100vh - 10vw); */
+    overflow-y: scroll;
+    /* display: none; */
+  }
+
+  .forStickyPosition{
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* min-height: 100%; */
+    }
+
+  .sideBarMobile{
+    display: none;
+    visibility: hidden;
+  }
+
+  .sideBarTop {
+    background: none;
+    /* outline: none; */
+    /* border: none; */
+    position: relative;
+    /* border: 1px solid green; */
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5vw;
+    width: 21vw;
+    /* margin: 1vw 0vw; */
+    /* cursor: pointer; */
+    /* border-radius: 0.5vw; */
+    margin-top: 1vw;
+  }
+
+  /* .sideBarTop:hover {
+    background: #200116;
+    color: white;
+  }
+
+  .sideBarTop:active {
+    filter: blur(0.1vw);
+  } */
+
+  .sideBarTopImg {
+    /* border: 1px solid green; */
+    position: absolute;
+    left: 0vw;
+    width: 5vw;
+    height: 5vw;
+    /* border: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    border-radius: 0.5vw;
+  }
+
+  .sideBarTopImgContent{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5vw;
+  }
+
+  .sideBarTopImg:hover > .sideBarTopImgEditOut{
+    visibility: visible;
+  }
+
+  .sideBarTopTextOut {
+    /* border: 1px solid blue; */
+    width: 15vw;
+    height: 5vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* margin-left: 1vw; */
+  }
+
+  .sideBarTopText1 {
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin-bottom: 0.2vw;
+    font-size: 1.5vw;
+    text-align: left;
+    /* font-weight: bold; */
+  }
+
+  .sideBarTopText2 {
+    /* border: 1px solid green; */
+    display: inline-block;
+    font-size: 1vw;
+  }
+
+  /* .sidebarTopButtonOut{
+    border: 1px solid red;
+    width: calc(100% - 5vw);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin: -1vw 5vw 1vw 0vw;
+    padding: 0vw 0.2vw 0vw 0.2vw;
+    z-index: 1;
+  } */
+
+  .sideBarTopImgEditOut{
+    position: absolute;
+    bottom: -1vw;
+    left: 1.5vw;
+    border: 0.2vw solid white;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: whitesmoke;
+
+
+    visibility: hidden;
+
+
+    /* margin-left: 1.3vw; */
+  }
+
+  .sideBarTopImgEditOut:active{
+    filter: blur(0.1vw);
+  }
+
+  .sideBarTopImgEdit{
+    /* position: absolute;
+    bottom: 0vw;
+    left: 0vw; */
+    width: 1.1vw;
+    height: 1.1vw;
+    /* background: url("camera.svg") no-repeat;
+    background-position: center; */
+    /* background-size: 1.5vw 1.5vw; */
+    border: none;
+    outline: none;
+    /* cursor: pointer; */
+    opacity: 0%;
+    z-index: 1;
+  }
+
+  .sideBarTopImgEdit1{
+    width: 1.1vw;
+    height: 1.1vw;
+    position: absolute;
+    z-index: 0;
+    /* cursor: pointer; */
+  }
+
+  /* .sideBarTopImgEdit1:hover {
+    filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+  } */
+
+  /* .sideBarTopImgEdit1:active {
+    filter: blur(0.1vw);
+  } */
+
+  .sideBarTopEdit{
+    position: absolute;
+    bottom: 0vw;
+    right: 0vw;
+    width: 1.2vw;
+    height: 1.2vw;
+    background: url("../harsh1/edit.svg") no-repeat;
+    background-position: center;
+    /* background-size: 1.5vw 1.5vw; */
+    border: none;
+    outline: none;
+  }
+
+  .sideBarTopEdit:hover {
+    filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+  }
+
+  .sideBarTopEdit:active {
+    filter: blur(0.1vw);
+  }
+
+  .sideBarCapsule {
+    background: none;
+    outline: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 21vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.2);
+    /* border: none; */
+    padding: 0.4vw 0.2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+    color: black
+    /* animation: profileCom 2s infinite; */
+  }
+
+  /* background: #200116; */
+
+  .profileComAnClass{
+    animation: profileCom 1.5s infinite ease-in-out;
+  }
+
+  @keyframes profileCom {
+    0%{
+      border: 0.2vw solid #FFD700;
+      color: black;
+    }
+    50%{
+      border: 0.2vw solid black;
+      /* color: #FFD700; */
+    }
+    100%{
+      border: 0.2vw solid #FFD700;
+      color: black;
+    }
+  }
+
+  /* .sideBarCapsule:hover { */
+    /* border: 0.1vw solid black; */
+    /* background: #200116;
+    color: white;
+  } */
+
+  .sideBarCapsule:active {
+    filter: blur(0.1vw);
+  }
+
+  .sideBarTextOut {
+    /* border: 1px solid green; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20vw;
+  }
+
+  .sideBarTextImgOut {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .sideBarTextImg {
+    /* border: 1px solid red; */
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+
+  .sideBarTextImg1 {
+    content: url("../harsh1/findMatch.svg");
+  }
+
+  .sideBarTextImg2 {
+    content: url("../harsh1/matches.svg");
+  }
+
+  .sideBarTextImg3 {
+    content: url("../harsh1/visitors.svg");
+  }
+
+  .sideBarTextImg4 {
+    content: url("../harsh1/likes.svg");
+  }
+
+  .sideBarTextImg5 {
+    content: url("../harsh1/like.svg");
+  }
+
+  .sideBarTextImg6 {
+    content: url("../harsh1/dislike.svg");
+  }
+
+  .sideBarTextImg7 {
+    content: url("../harsh1/premiumUsers.svg");
+  }
+
+  .sideBarText {
+    /* border: 1px solid green; */
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: left;
+    margin: 1vw;
+    cursor: pointer;
+  }
+
+  .hrStyle {
+    /* border-color: transparent; */
+    background: none;
+    display: inline-block;
+    /* height: 0.1vw; */
+    border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2);
+    width: 20vw;
+    margin: 1vw 0vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .sideBar{
+    display: none;
+    visibility: hidden;
+  }
+
+  .sideBarMobile {
+    /* border: 1px solid red; */
+    /* position: absolute;
+    top: 27vw;
+    left: 0vw; */
+    position: fixed;
+    top: 27vw;
+    left: 0vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 0vw;
+    /* border-right: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    /* border-bottom: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    /* padding: 0vw 1vw 1vw 1vw; */
+    /* height: 50vw; */
+    padding-bottom: 1vw;
+    background: #FFFFFF;
+    visibility: hidden;
+    transition: 0.1s;
+    z-index: 2;
+    /* max-height: 138vw; */
+    max-height: calc(100vh - 27vw);
+    min-height: calc(100vh - 27vw);
+    overflow-y: scroll;
+  }
+
+  .forStickyPosition{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100%; */
+  }
+
+  .sideBarTop {
+    background: none;
+    outline: none;
+    border: none;
+    position: relative;
+    /* border: 1px solid green; */
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vw;
+    width: 90vw;
+    margin: 2vw 0vw 0vw 0vw;
+    cursor: pointer;
+    /* border-radius: 0.5vw; */
+    /* margin-bottom: 1vw; */
+  }
+
+  /* .sideBarTop:hover {
+    background: #7D3668;
+    color: white;
+  } */
+
+  /* .sideBarTop:active {
+    filter: blur(0.5vw);
+  } */
+
+  .sideBarTopImg {
+    /* border: 1px solid green; */
+    /* position: absolute;
+    left: 0vw; */
+    width: 26vw;
+    height: 26vw;
+    /* border: 0.1vw solid rgba(0, 0, 0, 0.5); */
+    border-radius: 2vw;
+  }
+
+  .sideBarTopTextOut {
+    /* border: 1px solid blue; */
+    width: 59vw;
+    /* height: 5vw; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 2vw;
+  }
+
+  .sideBarTopText1 {
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin-bottom: 0.2vw;
+    font-size: 6vw;
+    text-align: left;
+    margin-bottom: 2vw;
+    /* font-weight: bold; */
+  }
+
+  .sideBarTopText2 {
+    /* border: 1px solid green; */
+    display: inline-block;
+    font-size: 4vw;
+  }
+
+  .sidebarTopButtonOut{
+    /* border: 1px solid red; */
+    width: calc(100% - 20vw);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin: -5.5vw 20vw 0vw 0vw;
+    padding: 0vw 0.2vw 0vw 0.2vw;
+    z-index: 1;
+  }
+
+  .sideBarTopImgEditOut{
+    border: 1vw solid white;
+    width: 9vw;
+    height: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: whitesmoke;
+    margin-left: 8.5vw;
+  }
+
+  .sideBarTopImgEditOut:active{
+    filter: blur(0.5vw);
+  }
+
+  .sideBarTopImgEdit{
+    /* position: absolute;
+    bottom: 0vw;
+    left: 0vw; */
+    width: 4.5vw;
+    height: 4.5vw;
+    /* background: url("camera.svg") no-repeat;
+    background-position: center; */
+    /* background-size: 1.5vw 1.5vw; */
+    border: none;
+    outline: none;
+    opacity: 0%;
+    z-index: 1;
+  }
+
+  .sideBarTopImgEdit1{
+    width: 4.5vw;
+    height: 4.5vw;
+    position: absolute;
+    z-index: 0;
+  }
+
+  /* .sideBarTopImgEdit:hover {
+    filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+  } */
+
+  /* .sideBarTopImgEdit:active {
+    filter: blur(0.5vw);
+  } */
+
+  .sideBarTopEdit{
+    position: absolute;
+    bottom: 0vw;
+    right: 0vw;
+    width: 5vw;
+    height: 5vw;
+    background: url("../harsh1/edit.svg") no-repeat;
+    background-position: center;
+    /* background-size: 1.5vw 1.5vw; */
+    border: none;
+    outline: none;
+  }
+
+  /* .sideBarTopEdit:hover {
+    filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+  } */
+
+  .sideBarTopEdit:active {
+    filter: blur(0.5vw);
+  }
+
+  .sideBarCapsule {
+    background: none;
+    outline: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    padding: 2vw;
+    font-size: 5.5vw;
+    font-weight: bold;
+    border-radius: 5vw;
+    margin: 2vw 0vw;
+    color: #200116;
+    /* animation: profileCom 2s infinite; */
+  }
+
+  .profileComAnClass{
+    animation: profileCom 1.5s infinite ease-in-out;
+  }
+
+  @keyframes profileCom {
+    0%{
+      border: 0.5vw solid #FFD700;
+      color: black;
+    }
+    50%{
+      border: 0.5vw solid black;
+      /* color: #FFD700; */
+    }
+    100%{
+      border: 0.5vw solid #FFD700;
+      color: black;
+    }
+  }
+
+  /* .sideBarCapsule:hover {
+    border: 0.1vw solid black;
+    background: #7D3668;
+    color: white;
+  } */
+
+  .sideBarCapsule:active {
+    filter: blur(0.5vw);
+  }
+
+  .sideBarTextOut {
+    /* border: 1px solid green; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 88vw;
+  }
+
+  .sideBarTextImgOut {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .sideBarTextImg {
+    /* border: 1px solid red; */
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .sideBarTextImg1 {
+    content: url("../harsh1/findMatch.svg");
+  }
+
+  .sideBarTextImg2 {
+    content: url("../harsh1/matches.svg");
+  }
+
+  .sideBarTextImg3 {
+    content: url("../harsh1/visitors.svg");
+  }
+
+  .sideBarTextImg4 {
+    content: url("../harsh1/likes.svg");
+  }
+
+  .sideBarTextImg5 {
+    content: url("../harsh1/like.svg");
+  }
+
+  .sideBarTextImg6 {
+    content: url("../harsh1/dislike.svg");
+  }
+
+  .sideBarTextImg7 {
+    content: url("../harsh1/premiumUsers.svg");
+  }
+
+  .sideBarText {
+    /* border: 1px solid green; */
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: left;
+    margin: 3vw 0vw 3vw 3vw;
+  }
+
+  .hrStyle {
+    /* border-color: transparent; */
+    background: none;
+    display: inline-block;
+    /* height: 0.1vw; */
+    border-bottom: 0.1vw solid rgba(0, 0, 0, 0.2);
+    width: 88vw;
+    margin: 2vw 0vw;
+  }
+}

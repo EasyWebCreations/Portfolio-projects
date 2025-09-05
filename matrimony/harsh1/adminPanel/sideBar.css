@@ -1,0 +1,139 @@
+.sideBar {
+  /* border: 1px solid red; */
+  position: fixed;
+  top: 5vw;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 20vw;
+  padding-bottom: 1vw;
+  background: #FFFFFF;
+  visibility: visible;
+  max-height: calc(100vh - 7.5vw);
+  overflow-y: scroll;
+  /* display: none; */
+}
+
+.sideBarTopOut{
+  /* border: 1px solid red; */
+  background: #7D3668;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sideBarTopImg{
+  /* border: 1px solid blueviolet; */
+  position: relative;
+  margin: 1vw 0vw;
+  width: 8vw;
+  height: 8vw;
+}
+
+.sideBarTopImgContent{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.sideBarTopImg:hover > .sideBarTopImgEditOut{
+  visibility: visible;
+}
+
+.sideBarTopImgEditOut{
+  position: absolute;
+  bottom: 0vw;
+  right: 0vw;
+  border: 0.2vw solid #7D3668;
+  width: 2vw;
+  height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: whitesmoke;
+  visibility: hidden;
+}
+
+.sideBarTopImgEditOut:active{
+  filter: blur(0.1vw);
+}
+
+.sideBarTopImgEdit{
+  /* position: absolute;
+  bottom: 0vw;
+  left: 0vw; */
+  width: 1.1vw;
+  height: 1.1vw;
+  /* background: url("camera.svg") no-repeat;
+  background-position: center; */
+  /* background-size: 1.5vw 1.5vw; */
+  border: none;
+  outline: none;
+  /* cursor: pointer; */
+  opacity: 0%;
+  z-index: 1;
+}
+
+.sideBarTopImgEdit1{
+  width: 1.1vw;
+  height: 1.1vw;
+  position: absolute;
+  z-index: 0;
+  /* cursor: pointer; */
+}
+
+.sideBarTopTextout{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3vw;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+
+.sideBarTopText{
+  margin: 0.1vw 0vw;
+  text-align: center;
+}
+
+.sideBarContent{
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1vw;
+}
+
+.sideBarTextOut{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.7vw 1vw 0.7vw 1.5vw;
+}
+
+.sideBarTextOut img{
+  height: 1.6vw;
+  margin-right: 0.8vw;
+}
+
+.sideBarTextOut a{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sideBarTextOut a:active{
+  filter: blur(0.1vw);
+}

@@ -1,0 +1,109 @@
+.regFormOut{
+  /* border: 1px solid rgba(0, 0, 0, 0.4); */
+  width: 60vw;
+  margin: 0vw auto;
+  padding: 2vw 3vw 3vw 3vw;
+  background: white;
+  border-radius: 0.3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.refFormHeading{
+  background: #7D3668;
+  font-size: 1.6vw;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 0.6vw 0vw;
+  color: white;
+  margin-bottom: 1vw;
+  border-radius: 0.3vw;
+}
+
+.regInputOut{
+  /* border: 1px solid red; */
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1vw;
+  margin-top: 1vw;
+}
+
+.regInput{
+  width: 100%;
+  padding: 0.5vw;
+  font-size: 1.2vw;
+  color: black;
+  margin: 0.2vw 0vw 1vw 0vw;
+  border: 0.1vw solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3vw;
+}
+
+.regForTerms{
+  /* border: 1px solid blue; */
+  width: 100%;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1vw 0vw;
+  position: relative;
+}
+
+.regForTerms input{
+  /* position: absolute;
+  left: 0vw; */
+  margin: 0vw 1vw 0vw 0vw;
+}
+
+.regForTerms span{
+  margin-left: 0.5vw;
+}
+
+.regForTerms a{
+  text-decoration: none;
+  margin-left: 0.3vw;
+  color: blue;
+}
+
+.regForTerms a:hover{
+  color: black;
+}
+
+.regForTerms a:active{
+  filter: blur(0.1vw);
+}
+
+.regFormSubmit{
+  background: #7D3668;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5vw 0vw;
+  font-size: 1.2vw;
+  color: white;
+  margin: 1vw 0vw;
+  border-radius: 0.3vw;
+  cursor: pointer;
+}
+
+.regFormSubmit:hover{
+  background: none;
+  color: black;
+  border: 0.1vw solid black;
+}
+
+.regFormSubmit:active{
+  filter: blur(0.1vw);
+}
+
+select{
+  cursor: pointer;
+}

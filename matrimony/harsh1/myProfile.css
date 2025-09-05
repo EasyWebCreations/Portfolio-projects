@@ -1,0 +1,574 @@
+@media screen and (min-width: 721px) {
+/* *{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+} */
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+select:hover {
+  background: #2001163a;
+}
+
+a:hover {
+  color: #200116a6;
+}
+
+a:active {
+  filter: blur(0.1vw);
+}
+
+.filterBtnMobile{
+  display: none;
+}
+
+.contentOut {
+  /* border: 1px solid blue; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 74vw;
+  margin-left: 24.5vw;
+}
+
+.content {
+  /* border: 1px solid red; */
+  /* display: inline-block; */
+  width: 100%;
+  margin-right: 0.4vw;
+  /* height: 70vw; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 1vw;
+  /* margin: 0vw 1vw; */
+}
+
+.profileContentTopOut{
+  /* border: 1px solid red; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2vw;
+  margin-top: 1vw;
+  border-radius: 0.5vw;
+  background: #FFFFFF;
+}
+
+.profileContentTop{
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+
+.profileContentTop1{
+  margin-bottom: 1vw;
+}
+
+.profileContentTopImg{
+  width: 1.5vw;
+  height: 1.5vw;
+  margin: 0vw 0.5vw 0vw 0vw;
+}
+
+
+
+
+#yourProfileTop{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ProfileTop{
+  /* border: 1px solid blue; */
+  margin: 0.8vw;
+  /* margin-left: -90px; */
+}
+
+.ProfileImage{
+  width: 11vw;
+  height: 11vw;
+}
+
+.ProfileImage #img{
+  width: 11vw;
+  height: 11vw;
+}
+
+.topleft{
+  display: flex;
+}
+
+.ProfileOption{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+.cardMoreOutPro{
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 2vw;
+  right: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 8vw;
+  margin-top: 1vw;
+}
+
+.profileContentTopText{
+  text-decoration: none;
+  color: black;
+  margin-right: 1.4vw;
+}
+
+.profileContentTopTextPro{
+  text-decoration: none;
+  font-size: 1.3vw;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  margin: 0.5vw 0vw;
+}
+
+/* .pdfGetOut{
+  border: 1px solid red;
+  display: flex-box;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+} */
+
+
+
+.pdfGet{
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  font-size: 1.3vw;
+  padding: 0.5vw 1vw;
+  /* border: none; */
+  border: 0.1vw solid white;
+  background: linear-gradient(to right, rgb(67,4,39), rgb(128,1,96));
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5vw;
+  color: white;
+}
+
+.pdfGet:hover{
+  color: black;
+  background: white;
+  border: 0.1vw solid black;
+}
+
+.pdfGet:active{
+  filter: blur(0.1vw);
+}
+
+.profileContentHeadOut{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 69vw;
+}
+
+.profileContentHead{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.profileContentHeadImg{
+  width: 1.8vw;
+  height: 1.8vw;
+  margin-right: 0.8vw;
+}
+
+
+.profileContentHeadImgR{
+  background: url("edit.svg") no-repeat;
+  background-size: 1.8vw 1.8vw;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 1.8vw;
+  height: 1.8vw;
+}
+
+.profileContentHeadImgR:hover {
+  filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+}
+
+.profileContentHeadImgR:active {
+  filter: blur(0.1vw);
+}
+
+.profileContentOut{
+  /* border: 1px solid red; */
+  width: 69vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+.profileContent{
+  /* border: 1px solid blue; */
+  width: 32vw;
+}
+
+.profileContentImg{
+  width: 1.3vw;
+  height: 1.3vw;
+}
+
+.profileContentText{
+  font-size: 1.2vw;
+}
+
+.profileGoBack{
+  /* position: absolute;
+  top: 2vw;
+  right: 2vw; */
+  font-size: 1.3vw;
+  padding: 0.5vw 1vw;
+  /* border: none; */
+  border: 0.1vw solid white;
+  background: linear-gradient(to right, rgb(67,4,39), rgb(128,1,96));
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5vw;
+  color: white;
+  margin: 1vw 0vw;
+}
+
+.profileGoBack:hover{
+  color: black;
+  background: white;
+  border: 0.1vw solid black;
+}
+
+.profileGoBack:active{
+  filter: blur(0.1vw);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cardTopSpaceAdjust{
+  width: 100%;
+  height: 1vw;
+  /* display: none; */
+  /* border: 1px solid red; */
+}
+
+.card {
+  position: relative;
+  /* border: 0.1vw solid rgba(0, 0, 0, 0.5); */
+  width: 25vw;
+  /* height: 8vw; */
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 0.5vw;
+  margin: 1vw 5vw 1vw 5vw;
+  /* float: left; */
+  /* background: linear-gradient(to right, rgb(248,248,247), rgb(255,240,242)); */
+  background: #FFFFFF;
+  box-shadow: 0.1vw 0.1vw 3vw rgba(0, 0, 0, 0.03);
+  /* border: 0.4vw solid rgba(0, 0, 0, 0.08); */
+}
+
+.cardImg {
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 1vw;
+  height: 7vw;
+  width: 7vw;
+  /* border: 0.1vw solid rgba(0, 0, 0, 0.5); */
+  border-radius: 0.5vw;
+  /* margin: 1vw 0vw 1vw 1vw; */
+  box-shadow: 0.1vw 0.1vw 2vw rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.cardTextOut {
+  position: relative;
+  /* border: 1px solid blue; */
+  /* width: 21.5vw; */
+  width: 15vw;
+  /* height: 7vw; */
+  margin: 0.5vw 1vw 0.8vw 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardText {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1vw;
+  font-weight: bold;
+  margin: 0.1vw 0vw;
+  /* transform: translateY(-0.2vw); */
+  width: 100%;
+}
+
+.cardLightText{
+  color: rgba(0, 0, 0);
+  font-weight: normal;
+}
+
+.cardText1{
+  /* border: 0.1vw solid #200116; */
+  width: 100%;
+  font-size: 1.05vw;
+  font-weight: bold;
+  /* margin-bottom: 0.3vw; */
+  /* background: linear-gradient(to right, rgb(88,1,59), rgb(128,1,96)); */
+  /* background: linear-gradient(to right,#a7acd9,#9e8fb2); */
+  background: #20011679;
+  /* background: rgba(0, 0, 0, 0.4); */
+  color: white;
+  border-radius: 0.5vw 0.5vw 0.3vw 0.3vw;
+  padding: 0.5vw 1vw 0.5vw 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  outline: none;
+  box-shadow: 0.1vw 0.1vw 2vw rgba(0, 0, 0, 0.05);
+}
+
+.cardText1Text{
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardText4{
+  width: 50%;
+}
+.cardText5{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* .cardMoreOutTest{
+  position: absolute;
+  right: 0vw;
+  top: 1vw;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vw;
+} */
+
+.cardMoreOut {
+  /* position: absolute;
+  bottom: 0vw; */
+  /* border: 1px solid red; */
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 0.5vw;
+  /* height: 1.5vw; */
+}
+
+.viewYourProfileForm{
+  position: absolute;
+  right: 0vw;
+  display: inline;
+  padding: 0vw;
+  /* border: 1px solid blue; */
+}
+
+.cardMore1 {
+  /* background: #66C051; */
+  /* background: linear-gradient(to right, rgb(5,52,32), rgb(4,192,82)); */
+  background: linear-gradient(to right, rgb(67,4,39), rgb(128,1,96));
+  /* background: #200116ce; */
+  /* background: rgba(0, 0, 0, 0.7); */
+  outline: none;
+  border: 0.1vw solid white;
+  /* border: none; */
+  /* position: absolute;
+  right: 0vw; */
+  padding: 0.1vw 0.5vw;
+  font-size: 0.9vw;
+  color: white;
+  /* height: 1.2vw; */
+  border-radius: 0.3vw;
+  cursor: pointer;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1vw 0.1vw 1vw rgba(0, 0, 0, 0.05);
+  margin-right: -0.1vw;
+  text-decoration: none;
+}
+
+.cardMore1:hover {
+  border: 0.1vw solid black;
+  color: black;
+  background: none;
+}
+
+.cardMore1:active {
+  filter: blur(0.1vw);
+}
+
+.cardMore {
+  /* border: 1px solid red; */
+  /* background: url("easyCode1.png") no-repeat;
+background-size: cover; */
+  outline: none;
+  border: none;
+  /* background: #20011659; */
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* height: 1.8vw;
+width: 1.8vw; */
+  /* margin-left: 1.5vw; */
+  cursor: pointer;
+  background-size: 1.2vw 1.2vw;
+  height: 1.2vw;
+  width: 1.2vw;
+  opacity: 0.3;
+}
+
+.cardMore:hover {
+  filter: drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.7));
+}
+
+.cardMore:active {
+  filter: blur(0.1vw);
+}
+
+.cardMore2 {
+  /* border: 1px solid red; */
+  background: url("like.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 1vw;
+  /* height: 1.2vw;
+  width: 1.2vw; */
+  /* -webkit-mask: url("like.svg") no-repeat center;
+  mask: url("like.svg") no-repeat center; */
+}
+
+.cardMore3 {
+  /* border: 1px solid red; */
+  /* transform: rotateX(180deg); */
+  background: url("dislike.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 1vw;
+  /* height: 1.4vw;
+  width: 1.4vw; */
+  /* -webkit-mask: url("dislike.svg") no-repeat center;
+  mask: url("dislike.svg") no-repeat center; */
+}
+
+.cardMore4 {
+  /* border: 1px solid red; */
+  background: url("flag.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 1vw;
+  /* height: 1.4vw;
+  width: 1.4vw; */
+  /* -webkit-mask: url("flag.svg") no-repeat center;
+  mask: url("flag.svg") no-repeat center; */
+}
+
+.partition {
+  /* border: 1px solid red; */
+  width: 7vw;
+  height: 8vw;
+  margin: 0.3vw 0vw;
+  float: left;
+  display: none;
+}
+}
+.profileContentText{
+  font-weight: normal;
+}

@@ -1,0 +1,20 @@
+<?php
+// $hostname = "us-cdbr-east-04.cleardb.com";
+// $username = "bfe13655e3a0f5";
+// $password = "e96f17d7";
+// $dbname = "heroku_16d720eebdfffe6";
+
+// $hostname = "217.21.74.90";
+$hostname = "srv1127.hstgr.io";
+$username = "u972129759_event_akshadaa";
+$password = "Ecct@29052000";
+$dbname = "u972129759_event_akshadaa";
+
+// $username = "u352929645_easytechs";
+// $password = "Ecct@29052000";
+// $dbname = "u352929645_akshadaaevent";
+
+$conn = mysqli_connect($hostname, $username, $password, $dbname);
+if (!$conn) {
+  echo "Database connection error" . mysqli_connect_error();
+}

@@ -1,0 +1,87 @@
+.ourStoriesFormOut{
+  /* border: 1px solid rgba(0, 0, 0, 0.4); */
+  width: 60vw;
+  margin: 0vw auto;
+  background: #F4F0F0;
+  border-radius: 0.3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ourStoriesFormHeading{
+  background: #7D3668;
+  font-size: 1.6vw;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  padding: 0.6vw 1vw;
+  color: white;
+  margin-bottom: 1vw;
+  border-radius: 0.3vw 0.3vw 0.1vw 0.1vw;
+}
+
+.ourStoriesFormOut table{
+  background: rgba(192, 192, 192, 0.2);
+  margin: 1vw 1vw 2vw 1vw;
+  border-radius: 0.3vw;
+  padding: 1.5vw;
+  font-size: 1.2vw;
+  border-collapse: separate;
+  border-spacing: 2vw 1vw;
+}
+
+.ourStoriesFormOut table td{
+  /* border: 1px solid red; */
+  position: relative;
+  font-weight: bold;
+}
+
+/* .input-group{
+  margin: 0.5vw 0.5vw 0.5vw 1.5vw;
+} */
+
+.ourStoriesFormOut input{
+  /* margin: 0.5vw 0.5vw 0.5vw 1vw; */
+  /* padding: 0.2vw 0.5vw; */
+  border: 0.1vw solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3vw;
+  font-size: 1.2vw;
+  margin-bottom: 0vw;
+  position: relative;
+}
+
+.ourStoriesFormOut textarea{
+  /* margin: 0.5vw 0.5vw 0.5vw 1vw; */
+  border: 0.1vw solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3vw;
+  font-size: 1.2vw;
+  padding: 0.5vw;
+}
+
+.addUser{
+  outline: none;
+  background: #7D3668;
+  border: 0.1vw solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3vw 1.5vw;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  color: white;
+  margin: 1vw 0vw;
+  font-size: 1.2vw;
+}
+
+.addUser:hover{
+  background: none;
+  border: 0.1vw solid black;
+  color: black;
+}
+
+.addUser:active{
+  filter: blur(0.1vw);
+}
